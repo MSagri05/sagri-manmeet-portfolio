@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Harvest — Manmeet Sagri</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap" 
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <h1>MANMEET SAGRI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <!-- Main Project Content -->
+  <main class="project-detail">
+
+    <!-- Back button -->
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+
+    <!-- Hero video preview -->
+    <section class="mini-video-hero">
+      <video autoplay muted loop playsinline>
+        <source src="videos/honey-demo.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- Project Intro (Title + Meta Info + Summary) -->
+    <section class="pd-hero">
+      <div class="pd-left">
+        <h2 class="pd-title">Honey Harvest<br>Simulation</h2>
+
+        <p class="pd-meta"><em>July 2025 - August 2025</em></p>
+        <p class="pd-meta"><strong>Role:</strong> Software Designer and Developer</p>
+        <p class="pd-meta"><strong>Tools:</strong> Java (Eclipse), Figma, Sketch.io</p>
+      </div>
+
+      <div class="pd-right">
+        <p>
+          <em>Honey Harvest</em> is an interactive simulation I created for IAT 265: Multimedia Programming for Design. 
+          The project required incorporating meaningful user interactions, and my personal goal was to create something 
+          unique, fun, and engaging that reflected my creativity. I chose the concept of honey harvesting, designing 
+          an experience where players capture a queen bee, guide her to a hive, and eventually harvest honey.
+        </p>
+
+        <p>
+          This solo project involved original ideation, visual design, and full implementation in Java. 
+          The simulation features animated feedback, timed transitions, and interactive stages that guide 
+          users through each step of the process.
+        </p>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="pd-process">
+      <h3 class="section-title">The Process…</h3>
+
+      <!-- Week 1 -->
+      <article class="pd-step">
+        <h4>Week 1</h4>
+
+        <div class="pd-grid">
+          <img src="images/proposal.png" alt="Proposal Document for the Simulation" />
+          <img src="images/mainElements.png" alt="Main elements for the simulation planned out within the proposal document" />
+        </div>
+
+        <p>
+          To begin, once I had finalized the concept for Honey Harvest, I created a proposal document outlining the main 
+          user journey steps and a table mapping the code structure. This included identifying core classes, shared methods, 
+          and how user interactions would trigger different simulation states. This planning stage established a strong 
+          technical foundation and ensured the project stayed organized.
+        </p>
+      </article>
+
+      <!-- Week 2 -->
+      <article class="pd-step">
+        <h4>Week 2</h4>
+
+        <div class="pd-grid">
+          <img src="images/figmaPage.png" alt="Assets UI elements drawn in Figma" />
+          <img src="images/sketchIO.png" alt="UI elements drawn in Sketch.io" />
+        </div>
+
+        <p>
+          Next, I moved into the visual design phase, using Figma and Sketch.io to create key assets, including the queen bee, 
+          worker bees, hive box, and start screen UI. I kept the art style playful and simple for clarity and animation flow. 
+          For the bees, I hand-drew each animation frame so they could run in sequence, bringing the characters to life.
+        </p>
+      </article>
+
+      <!-- Week 3 & 4 -->
+      <article class="pd-step">
+        <h4>Week 3 &amp; 4</h4>
+
+        <div class="pd-grid">
+          <img src="images/honeyCode.png" alt="Code Structure of the simulation" />
+          <img src="images/honeyApp.png" alt="Testing the simulation" />
+        </div>
+
+        <p>
+          I programmed the simulation using object-oriented Java, applying encapsulation to keep each class cleanly structured. 
+          All classes are organized into appropriate packages, with game-specific classes in the garden package and main panels 
+          in the main package. Clear comments were added throughout the code to improve readability and maintainability.
+        </p>
+
+        <p>
+          After the core features were complete, I refined the user experience. The simulation begins with a clean start screen 
+          and UI messaging that guides the player from capturing the queen bee to placing her inside the hive.  
+          When the honey is ready, a celebratory message appears with sparkles, a glowing hive, and a restart button 
+          so players can enjoy the simulation again.
+        </p>
+      </article>
+    </section>
+
+    <!-- Challenges & Reflection -->
+    <section class="section-spaced">
+      <h3 class="section-title">Challenges and Reflection</h3>
+
+      <p>
+        One major requirement was to design the UI elements yourself or properly cite external sources.  
+        I stepped out of my comfort zone and created all of the visual assets for Honey Harvest.  
+        I applied techniques learned from previous group projects and refined them through trial and error until I built assets I was proud of.
+      </p>
+
+      <p>
+        For programming challenges, I reached out to my TA whenever I got stuck. Getting feedback helped me solve issues more efficiently 
+        and gave me new ideas for improving the simulation. Overall, I learned that stepping outside my comfort zone, managing time well, 
+        and iterating based on feedback leads to stronger results.
+      </p>
+    </section>
+
+    <!-- Full Gameplay Video -->
+    <section class="section-spaced" style="text-align:center;">
+      <h3 class="section-title" style="display:inline-block;">Watch the full Simulation here!</h3>
+
+      <div style="margin-top:24px;">
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube.com/embed/83p7Ddqp9GM?start=2"
+          title="Honey Harvest Simulation"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="max-width:100%; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.15);"
+        ></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- JS Interactions -->
+  <script src="main.js"></script>
+</body>
+
+</html>

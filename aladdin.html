@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Manmeet Sagri</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MANMEET SAGRI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="project-detail">
+
+    <!-- Back Button -->
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+
+    <!-- Mini Gameplay Hero Video -->
+    <section class="mini-video-hero">
+      <video autoplay muted loop playsinline>
+        <source src="videos/aladdin-demo.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="pd-hero">
+      <div class="pd-left">
+        <h2 class="pd-title">Aladdin’s<br>Treasure Hunt</h2>
+
+        <p class="pd-meta"><em>March 2025 – April 2025</em></p>
+        <p class="pd-meta"><strong>Role:</strong> Game Designer and Developer</p>
+        <p class="pd-meta"><strong>Tools:</strong> Processing, Figma</p>
+      </div>
+
+      <div class="pd-right">
+        <p>
+          <em>Aladdin’s Treasure Hunt</em> is a side-scrolling platformer I created for IAT 167: Digital Games. The
+          goal was to design and program a multi-level game in Processing with an emphasis on object-oriented
+          programming and core mechanics.
+        </p>
+        <p>
+          I built a narrative where Aladdin collects a hidden key to unlock a treasure and rescue Princess Jasmine
+          while navigating moving platforms, enemies, and hazards. The game includes collectibles, level progression,
+          health, and sound cues to enhance the atmosphere.
+        </p>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="pd-process">
+      <h3 class="section-title">The Process…</h3>
+
+      <!-- Week 1 -->
+      <article class="pd-step">
+        <h4>Week 1</h4>
+        <div class="pd-grid">
+          <img src="images/storyboard.png" alt="Storyboard sketches for Aladdin level ideas" />
+          <img src="images/UML.png" alt="UML diagram of game structure" />
+        </div>
+        <p>
+          In the early stage, I finalized the idea of creating a multi-level side-scrolling game inspired by Aladdin. I
+          developed a game proposal and storyboard to outline the narrative, level progression, and gameplay mechanics.
+          To pre-plan the code structure, I created a UML diagram mapping out the classes, fields, and methods, ensuring
+          encapsulation and object-oriented principles were applied from the start.
+        </p>
+      </article>
+
+      <!-- Week 2 -->
+      <article class="pd-step">
+        <h4>Week 2</h4>
+        <div class="pd-grid">
+          <img src="images/assets.png" alt="Assets and audio folder with sprites, sequences, and sounds" />
+          <img src="images/readMe.png" alt="README credits and references for images and audio" />
+        </div>
+        <p>
+          My next step was designing the UI elements. For this project, I created some assets directly in Java, such as
+          simple UI shapes. The sequence animations for Aladdin’s running, jumping, and coin spinning were sourced from
+          free websites, which I adapted to fit the game. I also designed a few custom elements myself in Figma,
+          including the introduction letter image and health token. All assets, whether self-made, drawn in Java, or
+          collected online, were organized into a central “data” folder.
+        </p>
+        <p>
+          I also made sure to properly reference all borrowed sources, documenting image and audio credits in my README.
+          This ensured transparency about which parts I designed myself and which were adapted from external resources.
+        </p>
+      </article>
+
+      <!-- Week 3 & 4 -->
+      <article class="pd-step">
+        <h4>Week 3 &amp; 4</h4>
+        <div class="pd-grid">
+          <img src="images/code.png" alt="Processing / Java code screenshot showing Character class and animation sequence" />
+          <img src="images/gameplay.png" alt="Gameplay screenshot of Aladdin jumping across platforms and collecting coins" />
+        </div>
+        <p>
+          I built the game using object oriented programming in Java, applying encapsulation to keep each class
+          structured and reusable. Clear comments documented functionality and made the code easy to maintain. This
+          organization allowed me to add features such as animations, sound effects, and level progression without
+          disrupting the core system.
+        </p>
+        <p>
+          Once the core features were programmed, I tested by playing through each level, refining collisions, platform
+          movement, and triggers. Encapsulation also supported efficient debugging, helping me quickly locate and fix
+          errors while improving polish and gameplay balance.
+        </p>
+      </article>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="section-spaced">
+      <h3 class="section-title">Challenges and Reflection</h3>
+
+      <p>
+        One of the main challenges I faced was creating UI assets. Although the assignment allowed free online sources,
+        the professor encouraged us to design our own elements. I created a few assets myself but relied heavily on
+        external images, which taught me the importance of building more original UI in future projects. From my peers,
+        I learned about tools such as Illustrator and Sketch.io, and I plan to use these for my next project.
+      </p>
+      <p>
+        Overall, the feedback I received was positive, with a reminder to include more comments throughout my code.
+        This reinforced the value of clear documentation alongside strong design and programming practices.
+      </p>
+    </section>
+
+    <!-- Gameplay Video -->
+    <section class="section-spaced" style="text-align:center;">
+      <h3 class="section-title" style="display:inline-block;">Watch the full gameplay here!</h3>
+
+      <div style="margin-top:24px;">
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube.com/embed/U_tKk14pCtg?start=2"
+          title="Aladdin’s Treasure Quest Gameplay"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="max-width:100%; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.15);"
+        ></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+</body>
+
+</html>
