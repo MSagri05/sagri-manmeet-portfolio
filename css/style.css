@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Forum', serif;
-  line-height: 1.6;
+  line-height: 1.9;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -653,7 +653,7 @@ code {
   padding: 14px 16px 18px;
 }
 
-.project-info h3 {
+.project-info h2 {
   font-family: 'Bodoni Moda', serif;
   color: #222;
   margin: 0 0 4px;
