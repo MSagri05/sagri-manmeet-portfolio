@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide — Manmeet Sagri</title>
+
+    <!--  stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Type & heading fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>MANMEET SAGRI</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <main class="guide-main page">
+
+        <section id="interactive_elements">
+            <h2>Interactive Elements</h2>
+
+            <section class="element">
+                <h3>Main Header Navigation</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;header&gt;
+  &lt;h1&gt;MANMEET SAGRI&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="projects.html" aria-current="page"&gt;Projects&lt;/a&gt;
+    &lt;a href="about.html"&gt;About Me&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <p>See the sticky header at the top of this page.</p>
+            </section>
+
+            <section class="element">
+                <h3>Button</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;button class="view-projects-btn" onclick="window.location.href='projects.html'"&gt;View My Projects&lt;/button&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <button class="view-projects-btn" onclick="window.location.href='projects.html'">View My
+                    Projects</button>
+            </section>
+
+            <section class="element">
+                <h3>In-text Link</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;p&gt;Check out my &lt;a href="projects.html"&gt;projects&lt;/a&gt; here.&lt;/p&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <p>Check out my <a href="projects.html">projects</a> here.</p>
+            </section>
+        </section>
+
+        <section id="text_elements">
+            <h2>Text Elements</h2>
+
+            <section class="element">
+                <h3>Headings</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <div class="heading-examples">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                </div>
+            </section>
+
+            <section class="element">
+                <h3>Paragraph</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;p&gt;Hello! I'm Manmeet Sagri...&lt;/p&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <p>
+                    Hello! I'm <strong>Manmeet Sagri</strong>, an undergraduate student at SFU's School of Interactive
+                    Arts &amp; Technology, specializing in design and development. I love working at the intersection of
+                    technology and creativity, bringing ideas to life through interactive, level-based games and digital
+                    experiences.
+                </p>
+                <p>
+                    My academic projects range from game development and creative coding simulations to responsive web
+                    prototypes, giving me hands-on experience in both technical and design-focused work.
+                </p>
+            </section>
+
+            <section class="element">
+                <h3>List</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="combined_elements">
+            <h2>Combined Elements</h2>
+
+            <section class="element">
+                <h3>Project Analysis</h3>
+
+                <p>
+                    This section demonstrates how project analyses are structured in my portfolio. Each example explains
+                    the project context, my role, key process stages, problems and resolutions, and the overall
+                    reflection.
+                </p>
+
+                <!-- Project Analysis Example 1 -->
+                <article class="project-analysis">
+                    <div class="analysis-hero">
+                        <div class="analysis-left">
+                            <h4 class="analysis-title">Aladdin's Treasure Hunt</h4>
+                            <p class="analysis-meta"><em>March 2025 – April 2025</em></p>
+                            <p class="analysis-meta"><strong>Role:</strong> Game Designer and Developer</p>
+                            <p class="analysis-meta"><strong>Tools:</strong> Processing, Figma</p>
+                        </div>
+
+                        <div class="analysis-right">
+                            <p>
+                                <strong>Project Overview:</strong> Aladdin's Treasure Hunt is a level-based arcade game
+                                built
+                                in Processing. Players guide Aladdin through increasingly difficult levels by collecting
+                                gems
+                                while avoiding enemies.
+                            </p>
+                            <p>
+                                <strong>Context:</strong> This was an individual project for IAT 167, focused on
+                                applying
+                                object-oriented programming to create a playable, interactive game with escalating
+                                difficulty.
+                            </p>
+                            <p>
+                                <strong>My Contribution:</strong> I designed and developed the full game, including the
+                                game logic, level progression, collision detection, enemy behaviour, and all visual
+                                assets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="analysis-process">
+                        <h4>Process</h4>
+
+                        <section class="analysis-step">
+                            <h5>1. Concept and Planning</h5>
+                            <div class="analysis-grid">
+                                <img src="images/storyboard.png" alt="Storyboard sketches for Aladdin level ideas">
+                                <img src="images/UML.png" alt="UML diagram showing the game structure">
+                            </div>
+                            <p>
+                                I began by sketching the game concept and mapping out how levels would escalate.
+                                Planning the
+                                structure early helped me organize the codebase and anticipate complexity.
+                            </p>
+                        </section>
+
+                        <section class="analysis-step">
+                            <h5>2. Development</h5>
+                            <div class="analysis-grid">
+                                <img src="images/assets.png" alt="Game assets and animations organized for the Aladdin project">
+                                <img src="images/readMe.png" alt="README credits and references for images and audio">
+                            </div>
+                            <p>
+                                I built the game iteratively, starting with core movement and collision, then layering
+                                in
+                                enemies, gems, score tracking, and level transitions. Each feature was tested before
+                                adding
+                                the next.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="analysis-reflection">
+                        <h4>Problems and Resolutions</h4>
+                        <p>
+                            Collision detection between multiple moving objects was a key challenge. I resolved it by
+                            refining hitbox logic and separating enemy and gem collision into distinct methods.
+                        </p>
+
+                        <h4>Evaluation</h4>
+                        <p>
+                            This project strengthened my understanding of object-oriented programming, gameplay logic,
+                            and iterative development. It also showed me the importance of planning structure early and
+                            creating more original visual assets in future projects.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project Analysis Example 2 -->
+                <article class="project-analysis">
+                    <div class="analysis-hero">
+                        <div class="analysis-left">
+                            <h4 class="analysis-title">The Glazing Guide</h4>
+                            <p class="analysis-meta"><em>Jan 2025 – April 2025</em></p>
+                            <p class="analysis-meta"><strong>Team:</strong> Manmeet Sagri, Amanda Eng, Victoria Lo,
+                                Christine An</p>
+                            <p class="analysis-meta"><strong>Role:</strong> UX Researcher and Interaction Designer</p>
+                            <p class="analysis-meta"><strong>Tools:</strong> Figma, FigJam, Google Docs</p>
+                        </div>
+
+                        <div class="analysis-right">
+                            <p>
+                                <strong>Project Overview:</strong> <em>The Glazing Guide</em> was a collaborative
+                                interaction design project developed in partnership with Palette Art Studio. The goal
+                                was to improve the glazing experience for customers by making instructions clearer and
+                                reducing confusion.
+                            </p>
+                            <p>
+                                <strong>Context:</strong> Customers at the studio often relied on verbal instructions,
+                                spent too long selecting colours, and created crowding near the Paint Bar.
+                            </p>
+                            <p>
+                                <strong>My Contribution:</strong> I contributed to field research, synthesis,
+                                ideation, and interface design, especially in shaping the digital colour guide.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="analysis-process">
+                        <h4>Process</h4>
+
+                        <section class="analysis-step">
+                            <h5>1. Field Research and Observation</h5>
+                            <div class="analysis-grid">
+                                <img src="images/visit-notes-1.png" alt="Field notes from Palette Art Studio visit">
+                                <img src="images/visit-notes-2.png"
+                                    alt="Observation notes and sketches from the studio visit">
+                            </div>
+                            <p>
+                                The project began with field observation, interviews, and on-site note-taking. This
+                                stage helped identify key usability issues such as confusion around colour matching.
+                            </p>
+                        </section>
+
+                        <section class="analysis-step">
+                            <h5>2. Synthesis and Problem Framing</h5>
+                            <div class="analysis-grid">
+                                <img src="images/ethnography2.png" alt="Research synthesis notes and themes">
+                                <img src="images/persona.png" alt="Persona created from user research">
+                            </div>
+                            <p>
+                                After gathering research, we synthesized findings into themes, personas, and clearer
+                                problem definitions to move from observation to design direction.
+                            </p>
+                        </section>
+
+                        <section class="analysis-step">
+                            <h5>3. Ideation and Concept Development</h5>
+                            <div class="analysis-grid">
+                                <img src="images/conecpts.png" alt="Early concept sketches for the glazing guide">
+                                <img src="images/conceptReview.png" alt="Concept review for the glazing guide project">
+                            </div>
+                            <p>
+                                We explored several directions through sketches and collaborative discussion, shaping
+                                the digital colour guide direction that became part of the final system.
+                            </p>
+                        </section>
+
+                        <section class="analysis-step">
+                            <h5>4. Design and Prototyping</h5>
+                            <div class="analysis-grid">
+                                <img src="images/prototype.png" alt="Prototype screens for the digital colour guide">
+                                <img src="images/inProgressChalk.png" alt="In-progress chalkboard redesign">
+                            </div>
+                            <p>
+                                I worked on interface and layout decisions for the digital colour guide while the team
+                                continued refining the connected system of tools.
+                            </p>
+                        </section>
+
+                        <section class="analysis-step">
+                            <h5>5. Final Outcome</h5>
+                            <div class="analysis-grid">
+                                <img src="images/finalScanBoard.png" alt="Final chalkboard design for the Paint Bar">
+                                <img src="images/infographic.png" alt="Final infographic for glazing instructions">
+                            </div>
+                            <p>
+                                The final system included a Digital Colour Guide, Table Infographics, and a redesigned
+                                chalkboard supporting a clearer and more independent studio experience.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="analysis-reflection">
+                        <h4>Problems and Resolutions</h4>
+                        <p>
+                            A major design challenge was creating a solution that worked for both customers and staff.
+                            Through research synthesis, critique, and repeated prototyping, the team refined a system
+                            that reduced confusion while improving studio workflow.
+                        </p>
+
+                        <h4>Evaluation</h4>
+                        <p>
+                            This project strengthened my research, teamwork, and interaction design skills. It also
+                            helped me understand how thoughtful design decisions can improve a real-world service
+                            experience.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="element">
+                <h3>About Me Section</h3>
+
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="images/myPic2.jpeg" alt="Portrait of Manmeet Sagri">
+                    </div>
+
+                    <div class="about-text">
+                        <h4>About Me</h4>
+                        <p>
+                            Hello! I'm <strong>Manmeet Sagri</strong>, an undergraduate student at SFU studying
+                            Interactive Arts and Technology. I enjoy working at the intersection of technology and
+                            creativity, building interactive and visually engaging digital experiences.
+                        </p>
+                        <p>
+                            My work ranges from game development to web design and creative coding projects. I'm
+                            especially interested in designing systems that are both functional and expressive.
+                        </p>
+                        <p>
+                            I'm always exploring new tools and ideas, whether through coding, design, or photography,
+                            and I enjoy creating work that feels both personal and meaningful.
+                        </p>
+                        <button class="view-resume-btn" onclick="window.location.href='#'">View My Resume</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
+            <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+                aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+            <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+            <a href="styleGuide.html" aria-current="page">Style Guide</a>
+        </p>
+        <p>© 2026 Manmeet Sagri</p>
+    </footer>
+
+</body>
+
+</html>
