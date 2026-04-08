@@ -1,0 +1,411 @@
+/* =============== Base styles =============== */
+
+body {
+  font-family: 'Forum', serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Sticky header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f9f9f9e1;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  font-family: 'Bodoni Moda', serif;
+  margin: 0;
+}
+
+/* Shared heading styles */
+h2,
+h3 {
+  font-family: 'Bodoni Moda', serif;
+  color: #222;
+}
+
+/* =============== Navigation =============== */
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #616161;
+  font-style: italic;
+}
+
+nav a:active {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #444;
+}
+
+/* Current page underline (from aria-current) */
+nav a[aria-current="page"] {
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =============== Footer =============== */
+
+.site-footer {
+  font-family: 'Forum', serif;
+  color: #444;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  font-style: italic;
+  color: #616161;
+}
+
+.site-footer a:active {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #444;
+}
+
+/* =============== Section title with divider =============== */
+
+.section-title {
+  font-family: 'Bodoni Moda', serif;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: #000;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* =============== Home / intro =============== */
+
+.intro-text h2.hello {
+  font-family: "Dancing Script", cursive;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.intro-text h3 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+.intro-text p {
+  font-family: 'Forum', serif;
+  color: #444;
+  margin: 0;
+}
+
+/* =============== Primary button =============== */
+
+.view-projects-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Forum', serif;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.view-projects-btn:hover {
+  background-color: #616161;
+  font-style: italic;
+}
+
+.view-projects-btn::after {
+  content: ' →';
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  transition: opacity 0.25s ease;
+}
+
+.view-projects-btn:hover::after {
+  opacity: 1;
+}
+
+.view-projects-btn:active {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* =============== About page =============== */
+
+.about-photo {
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about-text .lead {
+  color: #222;
+}
+
+.about-facts {
+  list-style: none;
+  padding: 0;
+  font-size: 0.98rem;
+}
+
+.about-facts li::before {
+  content: "• ";
+  color: #000;
+}
+
+/* Resume button – same style as primary button */
+.view-resume-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Forum', serif;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.view-resume-btn:hover {
+  background-color: #616161;
+  font-style: italic;
+}
+
+.view-resume-btn::after {
+  content: ' →';
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  transition: opacity 0.25s ease;
+}
+
+.view-resume-btn:hover::after {
+  opacity: 1;
+}
+
+.view-resume-btn:active {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* =============== Projects grid =============== */
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project p {
+  color: #444;
+  line-height: 1.55;
+}
+
+.project img {
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay on hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 700;
+}
+
+.overlay p {
+  font-family: 'Forum', serif;
+  margin: 0;
+  color: #111;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+/* =============== Project detail =============== */
+
+.back-link {
+  display: inline-block;
+  background: #0d0d0c;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.back-link:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.mini-video-hero {
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mini-video-hero video {
+  object-fit: cover;
+}
+
+.pd-title {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.pd-meta {
+  font-family: 'Forum', serif;
+  color: #222;
+}
+
+.pd-right p {
+  font-family: 'Forum', serif;
+  color: #333;
+}
+
+/* Process section */
+.pd-process .section-title {
+  font-family: 'Bodoni Moda', serif;
+  position: relative;
+}
+
+.pd-process .section-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: #000;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+.pd-step h4 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+/* Process images */
+.pd-grid img {
+  object-fit: cover;
+  display: block;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* =============== Glazing Guide carousel =============== */
+
+.slide-image {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.slide-arrow {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 999px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.slide-arrow:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* =============== Utility =============== */
+
+.section-centered {
+  text-align: center;
+}
+
+.section-title-inline {
+  display: inline-block;
+}
+
+.video-frame {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* =============== Lightbox =============== */
+
+.project-detail img {
+  cursor: zoom-in;
+}
+
+.project-detail img:hover {
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox img {
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  cursor: zoom-out;
+}
+
+.lightbox-close {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 999px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: white;
+}
