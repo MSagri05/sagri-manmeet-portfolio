@@ -28,22 +28,46 @@ h3 {
   color: #222;
 }
 
+
+h1 {
+  font-family: 'Bodoni Moda', serif;
+  color: #222;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
 /* =============== Navigation =============== */
 
 nav a {
   text-decoration: none;
   color: #000;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, font-style 0.2s ease, text-decoration 0.2s ease;
 }
 
 nav a:hover {
   color: #616161;
   font-style: italic;
+  text-decoration: line-through;
 }
 
 nav a:active {
   font-style: italic;
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #444;
 }
 
@@ -69,12 +93,13 @@ nav a[aria-current="page"] {
 
 .site-footer a:hover {
   font-style: italic;
+  text-decoration: line-through;
   color: #616161;
 }
 
 .site-footer a:active {
   font-style: italic;
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #444;
 }
 
@@ -97,13 +122,14 @@ nav a[aria-current="page"] {
 
 /* =============== Home / intro =============== */
 
-.intro-text h2.hello {
+.intro-text p.hello {
   font-family: "Dancing Script", cursive;
+  font-size: 2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
 }
 
-.intro-text h3 {
+.intro-text h2 {
   font-family: 'Bodoni Moda', serif;
 }
 
@@ -120,15 +146,17 @@ nav a[aria-current="page"] {
   background-color: #000;
   color: #fff;
   font-family: 'Forum', serif;
-  text-decoration: none;
   border-radius: 6px;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease, padding 0.25s ease, color 0.25s ease;
   position: relative;
+  cursor: pointer;
+  border: none;
 }
 
 .view-projects-btn:hover {
   background-color: #616161;
   font-style: italic;
+  text-decoration: line-through;
 }
 
 .view-projects-btn::after {
@@ -144,7 +172,7 @@ nav a[aria-current="page"] {
 }
 
 .view-projects-btn:active {
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #ccc;
 }
 
@@ -178,8 +206,10 @@ nav a[aria-current="page"] {
   font-family: 'Forum', serif;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease, padding 0.25s ease, color 0.25s ease;
   position: relative;
+  cursor: pointer;
+  border: none;
 }
 
 .view-resume-btn:hover {
@@ -263,7 +293,7 @@ nav a[aria-current="page"] {
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .back-link:hover {
@@ -408,4 +438,161 @@ nav a[aria-current="page"] {
 
 .lightbox-close:hover {
   background: white;
+}
+/* =============== Style Guide specific =============== */
+
+/* Base h1 font (style guide shows h1 outside header) */
+h1 {
+  font-family: 'Bodoni Moda', serif;
+  color: #222;
+}
+
+/* Global link base */
+a {
+  color: #000;
+  transition: color 0.2s ease, font-style 0.2s ease;
+}
+
+a:hover {
+  color: #616161;
+  font-style: italic;
+}
+
+a:active {
+  text-decoration: line-through;
+  color: #444;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 12px 0 20px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* Element divider blocks */
+.element {
+  border-bottom: 1px solid #ddd;
+}
+
+.element:last-child {
+  border-bottom: none;
+}
+
+/* Section heading divider (style guide sections) */
+#interactive_elements > h2,
+#text_elements > h2,
+#combined_elements > h2,
+#branding > h2 {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+#interactive_elements > h2::after,
+#text_elements > h2::after,
+#combined_elements > h2::after,
+#branding > h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: #000;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Generic button class (used in style guide) */
+.button {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Forum', serif;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, padding 0.25s ease, color 0.25s ease;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  background-color: #616161;
+  font-style: italic;
+  padding-right: 36px;
+}
+
+.button::after {
+  content: ' →';
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  transition: opacity 0.25s ease;
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button:active {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* Style guide footer */
+.guide-footer {
+  font-family: 'Forum', serif;
+  color: #444;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+/* Project analysis cards */
+.project-analysis {
+  border-top: 1px solid #ddd;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.project-analysis:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.analysis-title {
+  font-family: 'Bodoni Moda', serif;
+  line-height: 1.05;
+}
+
+.analysis-meta {
+  color: #444;
+}
+
+.analysis-right p {
+  color: #333;
+}
+
+.analysis-process h4,
+.analysis-reflection h4 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+.analysis-step h5 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+.analysis-grid img {
+  object-fit: cover;
+  display: block;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
