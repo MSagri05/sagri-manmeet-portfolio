@@ -627,6 +627,7 @@ code {
 .filter-label {
   font-family: 'Forum', serif;
   font-size: 0.85rem;
+  font-weight: normal;
   color: #999;
   text-transform: uppercase;
   letter-spacing: 0.5px;
