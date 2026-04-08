@@ -175,8 +175,11 @@ main {
 }
 
 .project img {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .overlay {
@@ -638,5 +641,56 @@ pre {
 
   .analysis-title {
     font-size: 2rem;
+  }
+}
+/* =============== Projects page layout =============== */
+
+main.project-list-main {
+  display: block;
+  min-height: auto;
+  max-width: 1100px;
+  width: min(92%, 1100px);
+  margin: 40px auto 96px;
+}
+
+/* Filter bar — centered */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  padding: 12px 28px;
+  font-size: 1.05rem;
+}
+
+.project-card {
+  display: block;
+}
+
+/* Remove padding from .project inside card since card has border */
+.project-card .project {
+  border-radius: 0;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  font-size: 0.98rem;
+}
+
+@media (max-width: 600px) {
+  .filter-bar {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
