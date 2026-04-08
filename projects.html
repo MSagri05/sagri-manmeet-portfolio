@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Manmeet Sagri</title>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
 
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Type & heading fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header / Navigation -->
+
   <header>
     <h1>MANMEET SAGRI</h1>
     <nav>
@@ -27,66 +27,202 @@
     </nav>
   </header>
 
-  <!-- Main Projects Grid -->
-  <main class="projects">
+  <main class="project-list-main">
 
-    <!-- Project 1 — Aladdin Game -->
-    <a href="aladdin.html" class="project-link">
-      <section class="project">
-        <img src="images/aladdin.png" alt="Aladdin’s Treasure Hunt" />
-        <div class="overlay">
-          <h3>Aladdin’s Treasure Hunt</h3>
-          <p>Game Designer & Developer</p>
-        </div>
-      </section>
-    </a>
+    <p class="filter-label">Filter by category: </p>
 
-    <!-- Project 2 — Honey Harvest Simulation -->
-    <a href="honey.html" class="project-link">
-      <section class="project">
-        <img src="images/honey.png" alt="Honey Harvest Simulation" />
-        <div class="overlay">
-          <h3>Honey Harvest Simulation</h3>
-          <p>Programmer & Visual Designer</p>
-        </div>
-      </section>
-    </a>
+    <div class="filter-bar" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="development">Development</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+    </div>
 
-    <!-- Project 3 — Embark Website Redesign -->
-    <a href="embark.html" class="project-link">
-      <section class="project">
-        <img src="images/webDesign.png" alt="Embark Website Redesign" />
-        <div class="overlay">
-          <h3>Embark Website Redesign</h3>
-          <p>UX/UI Designer & Front-End Developer</p>
-        </div>
-      </section>
-    </a>
+    <section class="projects" aria-label="Projects">
 
-    <!-- Project 4 — Glazing Guide -->
-    <a href="glazing.html" class="project-link">
-      <section class="project">
-        <img src="images/glaze.png" alt="The Glazing Guide" />
-        <div class="overlay">
-          <h3>The Glazing Guide</h3>
-          <p>Design Researcher & Prototyper</p>
-        </div>
-      </section>
-    </a>
+      <article class="project-card" data-category="design development">
+        <a href="pictactoe.html" class="project-link">
+          <div class="project">
+            <img src="images/pictactoe.png" alt="Screenshot of Pic-Tac-Toe mobile app">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Pic-Tac-Toe</h3>
+            <p>UX Designer &amp; Mobile Developer</p>
+            <span class="project-tag">Design · Development</span>
+          </div>
+        </a>
+      </article>
 
+      <article class="project-card" data-category="development">
+        <a href="aladdin.html" class="project-link">
+          <div class="project">
+            <img src="images/aladdin.png" alt="Screenshot of Aladdin's Treasure Hunt game">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Aladdin's Treasure Hunt</h3>
+            <p>Game Designer &amp; Developer</p>
+            <span class="project-tag">Development</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="design">
+        <a href="glazing.html" class="project-link">
+          <div class="project">
+            <img src="images/glaze.png" alt="Photo of The Glazing Guide final outcome">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>The Glazing Guide</h3>
+            <p>Design Researcher &amp; Prototyper</p>
+            <span class="project-tag">Design</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="development">
+        <a href="honey.html" class="project-link">
+          <div class="project">
+            <img src="images/honey.png" alt="Screenshot of Honey Harvest Simulation">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Honey Harvest Simulation</h3>
+            <p>Programmer &amp; Visual Designer</p>
+            <span class="project-tag">Development</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="design">
+        <a href="embark.html" class="project-link">
+          <div class="project">
+            <img src="images/webDesign.png" alt="Screenshot of Embark Website Redesign">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Embark Website Redesign</h3>
+            <p>UX/UI Designer &amp; Front-End Developer</p>
+            <span class="project-tag">Design</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="design development">
+        <a href="fivecorners.html" class="project-link">
+          <div class="project">
+            <img src="images/fivecorners.png" alt="Screenshot of 5 Corners Daycare website">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>5 Corners Daycare</h3>
+            <p>UX Designer &amp; Front-End Developer</p>
+            <span class="project-tag">Design · Development</span>
+          </div>
+        </a>
+      </article>
+
+
+      <article class="project-card" data-category="development">
+        <a href="genzfashion.html" class="project-link">
+          <div class="project">
+            <img src="images/genzfashion.png" alt="Screenshot of Gen-Z Sustainable Fashion visualization site">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Gen-Z Sustainable Fashion</h3>
+            <p>Frontend Data Visualization Developer</p>
+            <span class="project-tag">Development</span>
+          </div>
+        </a>
+      </article>
+
+
+
+
+      <article class="project-card" data-category="ai">
+        <a href="plantify.html" class="project-link">
+          <div class="project">
+            <img src="images/plantify.png" alt="Screenshot of Plantify computer vision model results">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Plantify</h3>
+            <p>AI Developer &amp; Computer Vision</p>
+            <span class="project-tag">AI</span>
+          </div>
+        </a>
+      </article>
+
+
+      <article class="project-card" data-category="ai">
+        <a href="emotionfractal.html" class="project-link">
+          <div class="project">
+            <img src="images/emotionfractal.png" alt="Screenshot of Emotion-to-Fractal generative system">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Emotion-to-Fractal</h3>
+            <p>AI Developer &amp; Generative Systems</p>
+            <span class="project-tag">AI</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card" data-category="ai">
+        <a href="nutribud.html" class="project-link">
+          <div class="project">
+            <img src="images/nutribud.png" alt="Screenshot of NutriBud RAG chatbot interface">
+            <div class="overlay">
+              <span class="overlay-cta">View Details →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>NutriBud</h3>
+            <p>AI Developer &amp; RAG Chatbot</p>
+            <span class="project-tag">AI</span>
+          </div>
+        </a>
+      </article>
+
+
+
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <p>
       <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
-      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
     </p>
+    <p>© 2026 Manmeet Sagri</p>
   </footer>
 
-  <!-- JS interactions -->
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
+
 </body>
 
 </html>
