@@ -38,7 +38,7 @@ button.addEventListener("click", () => {
 // Typewriter Effect ONLY on index.html (homepage)
 
 //
-const nameEl = document.querySelector(".intro-text h3");
+const nameEl = document.querySelector(".intro-text h2");
 
 
 const isHome =
