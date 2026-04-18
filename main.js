@@ -1,4 +1,139 @@
+// main.js
+// this file handles all interactive elements + animations across my portfolio
+// includes:
+// - card swipe interaction (about page)
+// - back to top button (scroll interaction)
+// - typewriter animation (homepage)
+// - slideshow (glazing guide)
+// - image lightbox (project pages)
+// - project filtering (projects page)
+
+
+
+
 console.log("main.js loaded");
+
+
+// Card stack swipe (about.html)
+// learnt this from stack overflow + mdn and adapted it
+// https://stackoverflow.com/questions/15935318/dragging-an-element-across-the-screen
+
+
+(function setupCardStack() {
+  var stack = document.getElementById("cardStack");
+  if (!stack) return;
+
+  var cards = Array.from(stack.querySelectorAll(".photo-card"));
+
+  // used chatgpt to debug issues with this interaction 
+
+  // sets stacked layout using transform (rotate + translate)
+  function updateStack() {
+    cards.forEach(function (card, i) {
+      var fromTop = cards.length - 1 - i;
+      card.style.zIndex = String(i + 1);
+      card.style.transition = "transform 0.3s ease";
+      if (fromTop === 0) {
+        card.style.transform = "rotate(0deg) translate(0px, 0px)";
+      } else if (fromTop === 1) {
+        card.style.transform = "rotate(-3deg) translate(-6px, 8px)";
+      } else if (fromTop === 2) {
+        card.style.transform = "rotate(2deg) translate(4px, 16px)";
+      } else if (fromTop === 3) {
+        card.style.transform = "rotate(-1.5deg) translate(-3px, 24px)";
+      } else {
+        card.style.transform = "rotate(1deg) translate(2px, 32px)";
+      }
+    });
+  }
+
+  updateStack();
+
+  var startX = 0, startY = 0, moveX = 0, moveY = 0;
+  var dragging = false;
+  var activeCard = null;
+
+  function getTopCard() {
+    return cards[cards.length - 1];
+  }
+
+  // start dragging
+  stack.addEventListener("mousedown", function (e) {
+    activeCard = getTopCard();
+    if (!activeCard) return;
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    activeCard.style.transition = "none";
+    stack.classList.add("is-dragging");
+  });
+
+
+  stack.addEventListener("touchstart", function (e) {
+    activeCard = getTopCard();
+    if (!activeCard) return;
+    dragging = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    activeCard.style.transition = "none";
+    stack.classList.add("is-dragging");
+  }, { passive: true });
+
+  // move card
+  window.addEventListener("mousemove", function (e) {
+    if (!dragging || !activeCard) return;
+    moveX = e.clientX - startX;
+    moveY = e.clientY - startY;
+    var rotate = moveX * 0.07;
+    activeCard.style.transform = "translate(" + moveX + "px, " + moveY + "px) rotate(" + rotate + "deg)";
+  });
+
+  window.addEventListener("touchmove", function (e) {
+    if (!dragging || !activeCard) return;
+    if (e.cancelable) e.preventDefault();
+    moveX = e.touches[0].clientX - startX;
+    moveY = e.touches[0].clientY - startY;
+    var rotate = moveX * 0.07;
+    activeCard.style.transform = "translate(" + moveX + "px, " + moveY + "px) rotate(" + rotate + "deg)";
+  }, { passive: false });
+
+  window.addEventListener("mouseup", onDragEnd);
+  window.addEventListener("touchend", onDragEnd);
+
+  function onDragEnd() {
+    if (!dragging || !activeCard) return;
+    dragging = false;
+    stack.classList.remove("is-dragging");
+
+    
+     // if dragged enough ->  swipe away
+    if (Math.abs(moveX) > 80) {
+      var dir = moveX > 0 ? 1 : -1;
+      var savedY = moveY;
+      var card = activeCard;
+      card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+      card.style.opacity = "0";
+      card.style.transform = "translate(" + (dir * 700) + "px, " + savedY + "px) rotate(" + (dir * 25) + "deg)";
+
+      setTimeout(function () {
+        card.style.transition = "none";
+        card.style.opacity = "1";
+        card.style.transform = "";
+        cards.pop();
+        cards.unshift(card);
+        updateStack();
+      }, 360);
+    } else {
+        // snap back if not enough movement
+      activeCard.style.transition = "transform 0.25s ease";
+      activeCard.style.transform = "rotate(0deg) translate(0px, 0px)";
+    }
+
+    moveX = 0;
+    moveY = 0;
+    activeCard = null;
+  }
+})();
 
 //
 // Create the "Back to Top" button
@@ -9,19 +144,7 @@ button.innerText = "↑ Top";
 button.id = "backToTop";
 document.body.appendChild(button);
 
-button.style.position = "fixed";
-button.style.bottom = "20px";
-button.style.right = "20px";
-button.style.padding = "25px 15px";
-button.style.fontSize = "16px";
-button.style.fontFamily = "'Forum', serif";
-button.style.border = "none";
-button.style.borderRadius = "5px";
-button.style.background = "#0d0d0c";
-button.style.color = "#fff";
-button.style.cursor = "pointer";
-button.style.display = "none"; // Hidden by default.. and only appears when you scroll
-button.style.zIndex = "1000";
+
 
 // Show the button only when scrolling down
 window.addEventListener("scroll", () => {
@@ -42,22 +165,57 @@ const nameEl = document.querySelector(".intro-text h2");
 
 
 const isHome =
-  window.location.pathname === "/" ||
-  window.location.pathname.endsWith("/index.html") ||
-  window.location.pathname.endsWith("index.html");
+  !window.location.pathname.endsWith("about.html") &&
+  !window.location.pathname.endsWith("projects.html") &&
+  !window.location.pathname.endsWith("styleGuide.html");
 
-if (isHome && nameEl) {
-  const fullText = "Manmeet\u00A0Sagri";
-  nameEl.textContent = "";
-  let i = 0;
+//
+// Looping typewriter tagline on index.html
+//
+const taglineEl = document.querySelector(".intro-text .tagline");
 
-  (function type() {
-    if (i < fullText.length) {
-      nameEl.textContent += fullText[i];
-      i++;
-      setTimeout(type, 150);
+if (isHome && taglineEl) {
+  const roles = [
+    "Front-End Developer",
+    "UX Designer",
+    "Creative Coder",
+    "SIAT Student @ SFU"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const typeSpeed = 100;
+  const deleteSpeed = 60;
+  const pauseAfterType = 1800;
+  const pauseAfterDelete = 400;
+
+  function typeLoop() {
+    const currentRole = roles[roleIndex];
+
+    if (!deleting) {
+      taglineEl.textContent = currentRole.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === currentRole.length) {
+        deleting = true;
+        setTimeout(typeLoop, pauseAfterType);
+        return;
+      }
+      setTimeout(typeLoop, typeSpeed);
+    } else {
+      taglineEl.textContent = currentRole.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeLoop, pauseAfterDelete);
+        return;
+      }
+      setTimeout(typeLoop, deleteSpeed);
     }
-  })();
+  }
+
+  typeLoop();
 }
 
 
@@ -68,7 +226,7 @@ if (isHome && nameEl) {
 const slideImg = document.getElementById("gg-slide-image");
 
 if (slideImg) {
-  const totalSlides = 21; // change this if you add/remove slides
+  const totalSlides = 21; 
   let currentSlide = 1;
 
   const counterEl = document.getElementById("gg-slide-counter");
@@ -96,6 +254,8 @@ if (slideImg) {
 
 //
 // click-to-zoom lightbox for project detail images
+// learnt from w3schools modal images
+// https://www.w3schools.com/howto/howto_css_modal_images.asp
 //
 (function setupLightbox() {
   // only run on pages that have project detail layout
@@ -165,6 +325,8 @@ if (slideImg) {
 
 //
 // Project filter buttons (projects.html)
+// learnt from w3schools filter elements
+// https://www.w3schools.com/howto/howto_js_filter_elements.asp
 //
 const filterBtns = document.querySelectorAll('.filter-btn');
 

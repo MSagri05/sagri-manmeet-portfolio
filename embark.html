@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Manmeet Sagri</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embark Website Redesign · Manmeet Sagri</title>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
 
   <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header / Navigation -->
+
   <header>
     <h1>MANMEET SAGRI</h1>
     <nav>
@@ -27,169 +26,240 @@
     </nav>
   </header>
 
-  <!-- Main project detail content -->
   <main class="project-detail">
 
-    <!-- Back to Projects button -->
     <a href="projects.html" class="back-link">← Back to Projects</a>
 
-    <!-- Mini website hero video -->
-    <section class="mini-video-hero">
+    <section class="mini-video-hero" aria-label="Embark website redesign preview video">
       <video autoplay muted loop playsinline>
-        <source src="videos/website-demo.mp4" type="video/mp4" />
+        <source src="videos/website-demo.mp4" type="video/mp4">
       </video>
     </section>
 
-    <!-- Project hero: title, meta, and summary -->
-    <section class="pd-hero">
+    <!-- Project Overview -->
+    <section class="pd-hero" id="overview">
       <div class="pd-left">
-        <h2 class="pd-title">Website Redesign:<br>Embark’s Sustainability</h2>
+        <p class="pd-label">IAT 235 · Information Design</p>
+        <h2 class="pd-title">Embark Website<br>Redesign</h2>
 
-        <p class="pd-meta"><em>Nov 2024 - Dec 2024</em></p>
-        <p class="pd-meta">
-          <strong>Team Members:</strong> Manmeet Sagri, Hind Hammad, Yilin Gao
-        </p>
-        <p class="pd-meta">
-          <strong>Role:</strong> Web Designer &amp; Front-End Developer
-        </p>
-        <p class="pd-meta">
-          <strong>Tools:</strong> HTML, CSS, Figma
-        </p>
+        <div class="pd-stats">
+          <div class="pd-stat">
+            <span class="pd-stat-value">3</span>
+            <span class="pd-stat-label">Team Members</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">CSS</span>
+            <span class="pd-stat-label">My Lead</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">Client</span>
+            <span class="pd-stat-label">Project</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">4 wks</span>
+            <span class="pd-stat-label">Timeline</span>
+          </div>
+        </div>
+
+        <p class="pd-meta"><em>November – December 2024</em></p>
+        <p class="pd-meta"><strong>Team:</strong> Hind Hammad, Yilin Gao</p>
+        <p class="pd-meta"><strong>My Role:</strong> CSS Styling, Wireframing &amp; Visual Design</p>
+        <p class="pd-meta"><strong>Tools:</strong> HTML, CSS, Figma</p>
       </div>
 
       <div class="pd-right">
+        <p class="pd-desc-label">What is it?</p>
         <p>
-          This project was completed as part of a three-person team for the Embark Sustainability Society. The
-          requirement was to transform their Sustainable Project Funding Opportunities spreadsheet into a more usable
-          and accessible website. Working within strict design parameters, we focused on reorganizing content into clear
-          hierarchies, improving labels and link text, and building responsive layouts for both mobile and desktop.
+          A client-facing website redesign for Embark Sustainability Society, completed as part of IAT 235.
+          The goal was to transform their Sustainable Project Funding Opportunities spreadsheet into a clear,
+          navigable, and accessible web experience.
         </p>
         <p>
-          Our team collaborated on wireframing and prototyping before moving into development. Hind Hammad focused on
-          HTML structure, I was responsible for CSS styling and layouts, and Yilin Gao contributed across both design
-          and coding tasks. The final redesign produced an interactive website that emphasized usability, clarity, and
-          accessibility.
+          This was a team project with a real client. We worked through a full design process including
+          wireframing, client feedback sessions with Embark volunteers, Figma prototyping, and front-end
+          development. I led the CSS implementation and contributed to wireframing and HTML content throughout.
         </p>
       </div>
     </section>
 
-    <!-- Process section -->
-    <section class="pd-process">
-      <h3 class="section-title">The Process…</h3>
+    <!-- Process -->
+    <section class="pd-process" id="process">
+      <h3 class="section-title">The Process</h3>
 
-      <!-- Week 1 -->
-      <article class="pd-step">
-        <h4>Week 1</h4>
-
+      <article class="pd-step" id="wireframing">
+        <p class="pd-phase-label">Phase 1</p>
+        <h4>Wireframing</h4>
         <div class="pd-grid">
-          <img src="images/wireframeSketch.png" alt="Wireframe sketches for the webiste layouts" />
-          <img src="images/figmaWireframe.png" alt="Wirefram on Figma" />
+          <div class="pd-img-wrap">
+            <img src="images/wireframeSketch.png" alt="Early hand-drawn wireframe sketches exploring layout ideas for the Embark redesign">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/figmaWireframe.png" alt="Digital Figma wireframe that was flagged for being too detailed and close to a prototype">
+          </div>
         </div>
-
         <p>
-          We began by hand-sketching our individual wireframes to quickly explore different layout possibilities. Each
-          team member then translated their sketches into low-fidelity wireframes using Figma. This allowed us to
-          experiment with navigation structures, labeling choices, and layout ideas in both physical and digital
-          formats.
+          Each team member began by sketching wireframes independently to explore different layout ideas
+          for presenting the funding information. We then moved into Figma to create a digital version.
         </p>
         <p>
-          After completing our drafts, we met as a group to share and compare our wireframes. Through discussion, we
-          identified the strongest elements from each person’s design. Hind led the task of synthesizing these ideas
-          into a single unified wireframe that reflected the best aspects of our collective thinking. This collaborative
-          process gave us a strong foundation before moving into higher-fidelity prototyping in later weeks.
+          Our professor flagged that our Figma wireframe was too close to a finished prototype. It included
+          interactable elements, real images, and detailed styling instead of staying rough and structural.
+          A proper wireframe uses placeholder boxes, crosses for images, and focuses on layout only.
+          We understood the feedback, but due to timeline constraints we moved forward rather than revising.
+          It was an important lesson about the distinction between wireframing and prototyping.
+        </p>
+        <p class="pd-note">
+          Wireframes communicate structure. Prototypes communicate look and feel. Conflating the two
+          skips a valuable stage of iteration.
         </p>
       </article>
 
-      <!-- Week 2 -->
-      <article class="pd-step">
-        <h4>Week 2</h4>
-
+      <article class="pd-step" id="content">
+        <p class="pd-phase-label">Phase 2</p>
+        <h4>HTML Content &amp; Client Feedback</h4>
         <div class="pd-grid">
-          <img src="images/week2Progress.png" alt="Progress of wireframe using html and css" />
-          <img src="images/indexCode.png" alt="HTML code for the in progress website" />
+          <div class="pd-img-wrap">
+            <img src="images/week2Progress.png" alt="In-progress HTML build of the Embark website showing content structure">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/indexCode.png" alt="HTML code showing the structure of the Embark funding page">
+          </div>
         </div>
-
         <p>
-          We moved from wireframes into coding, starting with individual HTML and CSS practice. HTML was used to
-          structure the content while CSS handled the styling and layouts. Our professor encouraged us to work
-          independently at first to test our skills before merging efforts.
+          My teammate and I worked collaboratively on the HTML, building out the content structure and
+          populating the funding information from Embark's spreadsheet. We organized the grants into
+          sections by funding amount, each with consistent labels for description, requirements, deadlines,
+          and a learn more link.
         </p>
         <p>
-          When we began building the final version, we ran into challenges with the scrolling effect, but Yilin figured
-          out the solution and helped the team implement it successfully.
+          Throughout this phase we received active feedback from Embark volunteers. Their input helped us
+          refine the content hierarchy, improve label clarity, and make sure the information felt
+          useful and easy to navigate for their actual users.
         </p>
       </article>
 
-      <!-- Week 3 & 4 -->
-      <article class="pd-step">
-        <h4>Week 3 &amp; 4</h4>
-
+      <article class="pd-step" id="prototype">
+        <p class="pd-phase-label">Phase 3</p>
+        <h4>Figma Prototype &amp; Visual Direction</h4>
         <div class="pd-grid">
-          <img
-            src="images/finalPrototype.png"
-            alt="Final Figma Prototype on Figma considereing the color palettes"
-          />
-          <img src="images/finalWeb.png" alt="Final Website Look" />
+          <div class="pd-img-wrap">
+            <img src="images/finalPrototype.png" alt="Final Figma prototype applying Embark's brand colors, logo, and visual identity">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/figmaWireframe.png" alt="Figma design showing layout and color application using Embark brand assets">
+          </div>
         </div>
-
         <p>
-          I refined the wireframes into a polished prototype, applying Embark’s official color palette, logos, and
-          design assets. This ensured our redesign matched their branding standards. Using this prototype as a guide, I
-          focused on the CSS styling for the final website, while Hind handled the HTML structure and layout fixes.
-          Together, we aligned the design with both usability goals and the client’s visual identity.
+          With the content structure settled, I built the Figma prototype applying Embark's provided
+          brand assets: their color palette, logo, and typography guidelines. This prototype served
+          as the visual reference for CSS development, giving the team a clear guide before writing
+          any styling code.
         </p>
+      </article>
+
+      <article class="pd-step" id="development">
+        <p class="pd-phase-label">Phase 4</p>
+        <h4>CSS Implementation</h4>
+        <div class="pd-grid">
+          <div class="pd-img-wrap">
+            <img src="images/week2Progress.png" alt="CSS styled Embark website showing the two-column grant card layout">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/finalWeb.png" alt="Final styled Embark website showing responsive layout across the funding sections">
+          </div>
+        </div>
+        <p>
+          I led the CSS for the project. Key decisions and systems I built:
+        </p>
+        <ul class="pd-list">
+          <li>CSS Grid for the grant card layout, splitting each funding section into a two-column structure at wider viewports</li>
+          <li>Flexbox for the sticky header navigation and the horizontal scrolling funding category nav</li>
+          <li>Three responsive breakpoints at 50rem, 62rem, and 90rem to scale typography, spacing, and layout</li>
+          <li>Linear gradient backgrounds using Embark's green palette to create the homepage hero visual</li>
+          <li>A CSS scroll animation on the category nav hint text using keyframes and translateX</li>
+          <li>Consistent color application across all grant sections using Embark's brand values</li>
+          <li>Hover and focus states on all interactive elements for accessibility</li>
+        </ul>
       </article>
     </section>
 
-    <!-- Challenges & Reflection -->
-    <section class="section-spaced">
-      <h3 class="section-title">Challenges and Reflection</h3>
+    <!-- Reflection -->
+    <section class="section-spaced" id="reflection">
+      <h3 class="section-title">Problems &amp; Reflection</h3>
 
-      <p>
-        This project was both fun and challenging, and it showed me the value of strong teamwork. Whenever one of us
-        struggled in a certain area, we encouraged each other to try new roles and offered guidance along the way. I
-        took the design role seriously, ensuring our prototype and final website followed Embark’s color palette,
-        branding standards, and accessibility goals. One technical challenge we faced was the scrolling effect, which
-        took trial and error until we figured it out together.
-      </p>
+      <div class="pd-problem">
+        <p class="pd-problem-label">Problem</p>
+        <p class="pd-problem-title">Our wireframe skipped straight to prototype-level detail.</p>
+        <p class="pd-problem-body">
+          The Figma wireframe we submitted was flagged by our professor for being too polished. It included
+          real images, interactive elements, and styled components. These belong in a prototype, not
+          a wireframe. We understood the distinction after the feedback but moved forward due to time.
+          Going forward, I now treat wireframing as a separate, deliberately rough stage.
+        </p>
+      </div>
 
-      <p>
-        Overall, we received positive feedback for keeping the website simple, accessible, and easy to navigate for
-        people exploring scholarship opportunities.
-      </p>
+      <div class="pd-problem">
+        <p class="pd-problem-label">Problem</p>
+        <p class="pd-problem-title">Translating a dense spreadsheet into scannable sections required real decisions.</p>
+        <p class="pd-problem-body">
+          The original content had no visual hierarchy. I had to decide what information to foreground,
+          how to group related details, and what visual cues would help users scan quickly. I used
+          card-based grouping, consistent heading labels, and inline deadline formatting to create
+          structure the spreadsheet was missing.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <p class="pd-problem-label">Feedback</p>
+        <p class="pd-problem-title">The site was praised for being simple, accessible, and easy to navigate.</p>
+        <p class="pd-problem-body">
+          We received positive feedback for keeping the redesign clean and focused. The professor noted
+          the site made scholarship information significantly easier to find and understand compared
+          to the original spreadsheet. The client feedback sessions throughout the process helped
+          us stay aligned with what Embark's users actually needed.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <p class="pd-problem-label">What I Learned</p>
+        <p class="pd-problem-title">Each design stage has a purpose. Skipping one costs you later.</p>
+        <p class="pd-problem-body">
+          The wireframe feedback was the biggest lesson of this project. Wireframes exist to test
+          structure without getting attached to visuals. When we jumped ahead, we lost that iteration
+          opportunity. I also learned how much more confident CSS feels when you have a solid prototype
+          to work from. The design decisions are already made, and implementation becomes translation.
+        </p>
+      </div>
     </section>
 
-    <!-- Website screen recording -->
-    <section class="section-spaced" style="text-align:center;">
-      <h3 class="section-title" style="display:inline-block;">Watch the Website screen-recoding here!</h3>
+    <!-- Video -->
+    <section class="section-spaced" id="demo">
+      <h3 class="section-title">Watch the Website Walkthrough</h3>
 
-      <div style="margin-top:24px;">
-        <iframe
-          width="800"
-          height="450"
-          src="https://www.youtube.com/embed/JgYw3SeriMo?si=Xm9dluvkRWHmMqNu"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <div class="pd-video-wrap">
+        <iframe src="https://www.youtube.com/embed/JgYw3SeriMo?si=Xm9dluvkRWHmMqNu"
+          title="Embark website redesign walkthrough video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <p>
-      <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
-      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
     </p>
+    <p>© 2026 Manmeet Sagri</p>
   </footer>
 
-  <!-- JS interactions -->
   <script src="main.js"></script>
+
 </body>
 
 </html>

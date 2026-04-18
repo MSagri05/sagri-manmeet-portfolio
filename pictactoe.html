@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pic-Tac-Toe · Manmeet Sagri</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>MANMEET SAGRI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <main class="project-detail">
+
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+
+    <!-- TODO: replace with your Pic-Tac-Toe demo video -->
+    <section class="mini-video-hero" aria-label="Pic-Tac-Toe app preview video">
+      <video autoplay muted loop playsinline>
+        <source src="videos/pictactoe-demo.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="pd-hero" id="overview">
+      <div class="pd-left">
+        <p class="pd-label">IAT 359 · Mobile Computing</p>
+        <h2 class="pd-title">Pic-Tac-Toe</h2>
+
+        <div class="pd-stats">
+          <div class="pd-stat">
+            <span class="pd-stat-value">2</span>
+            <span class="pd-stat-label">Team Members</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">8</span>
+            <span class="pd-stat-label">Screens</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">Lead</span>
+            <span class="pd-stat-label">Developer</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">4 mo</span>
+            <span class="pd-stat-label">Timeline</span>
+          </div>
+        </div>
+
+        <p class="pd-meta"><em>September – December 2025</em></p>
+        <p class="pd-meta"><strong>Team:</strong> Manmeet Sagri, Hind Hammad</p>
+        <p class="pd-meta"><strong>My Role:</strong> Concept, Lead Developer &amp; Visual Direction</p>
+        <p class="pd-meta"><strong>Tools:</strong> React Native, Expo, Firebase, SQLite, Figma</p>
+      </div>
+
+      <div class="pd-right">
+        <p class="pd-desc-label">What is it?</p>
+        <p>
+          A photo-based mobile Tic-Tac-Toe game designed for Gen Z. Every move is a real photo instead of an X or O.
+          Players tap a tile, snap or pick a photo, and place it on the board. The game board becomes a shared memory.
+        </p>
+        <p>
+          Inspired by apps like BeReal and Locket Widget, Pic-Tac-Toe is built around a simple insight: our generation
+          does not always want to text, but that does not mean we do not want to stay connected. A quick game gives
+          friends a low-pressure reason to share a moment.
+        </p>
+        <p class="pd-note">
+          The prototype runs as a pass-and-play game on one device, but the vision is a fully async multiplayer
+          experience where each player plays from their own phone on their own time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="pd-process" id="process">
+      <h3 class="section-title">The Process</h3>
+
+      <!-- Phase 1 -->
+      <article class="pd-step" id="concept">
+        <span class="pd-phase-label">Phase 1</span>
+        <h4>Concept &amp; Ideation</h4>
+        <div class="pd-grid">
+          <!-- TODO: add image of early sketches / mood board -->
+          <img src="images/pictactoe-sketches.png" alt="Early concept sketches and wireframes for Pic-Tac-Toe">
+          <!-- TODO: add image of logo exploration / color experiments -->
+          <img src="images/pictactoe-logoprocess.png" alt="Logo exploration and color palette experiments for Pic-Tac-Toe">
+        </div>
+        <p>
+          The concept came from noticing a tension in how Gen Z stays connected. We are not lazy; we are
+          selective. Texting can feel like effort, but sharing a moment feels effortless when it has a reason.
+          Pic-Tac-Toe gives you that reason: it is your turn.
+        </p>
+        <p>
+          In the first two weeks, I shared my vision with my teammate Hind, who translated it into sketches
+          and logo iterations. We went through multiple logo directions and tested color palettes together.
+          I kept pushing for something gender-neutral, and we landed on a red and blue pairing that felt
+          energetic without leaning into either direction. I gathered feedback from friends, family, and
+          classmates to select the final logo direction.
+        </p>
+        <p>
+          We drew inspiration from BeReal's spontaneity, Locket's intimacy, and the simplicity of a game
+          everyone already knows. The design goal was to feel playful and social, not gamified or competitive.
+        </p>
+      </article>
+
+      <!-- Phase 2 -->
+      <article class="pd-step" id="auth">
+        <span class="pd-phase-label">Phase 2</span>
+        <h4>Auth &amp; Profile Setup</h4>
+        <div class="pd-grid">
+          <!-- TODO: add screenshot of sign up screen -->
+          <img src="images/pictactoe-signup.png" alt="Pic-Tac-Toe sign up screen">
+          <!-- TODO: add screenshot of profile setup screen -->
+          <img src="images/pictactoe-profile.png" alt="Pic-Tac-Toe profile setup screen with avatar and nickname">
+        </div>
+        <p>
+          I built the full authentication flow using Firebase Auth: sign up with email and password,
+          sign in, and a profile setup screen where users pick a nickname, an optional favourite colour,
+          and a profile photo from their camera or gallery.
+        </p>
+        <p>
+          Profile preferences are saved locally with AsyncStorage so the app remembers who you are between sessions.
+          After sign-in, the app checks whether a nickname already exists and routes the user to either
+          Find Friends or back to Profile Setup. It is a small but important detail that makes returning users feel
+          at home immediately.
+        </p>
+      </article>
+
+      <!-- Phase 3 -->
+      <article class="pd-step" id="gameplay">
+        <span class="pd-phase-label">Phase 3</span>
+        <h4>Game Screen &amp; Core Logic</h4>
+        <div class="pd-grid">
+          <!-- TODO: add screenshot of game board mid-game (P1's turn, red bg) -->
+          <img src="images/pictactoe-gameplay1.png" alt="Pic-Tac-Toe game board showing P1's turn with red background and placed photos">
+          <!-- TODO: add screenshot of game board on P2's turn (blue bg) -->
+          <img src="images/pictactoe-gameplay2.png" alt="Pic-Tac-Toe game board showing P2's turn with blue background">
+        </div>
+        <p>
+          The game screen was the most technically demanding part of the project. I built the core game
+          logic from scratch using React Native, building a 3x3 board where each cell holds a photo URI and a
+          player tag. Win detection checks all eight classic Tic-Tac-Toe lines after every move.
+          A draw is detected when all nine cells are filled with no winner.
+        </p>
+        <p>
+          I used tutorials and documentation to understand the win-checking algorithm, then adapted it
+          to work with a photo-cell data structure rather than simple X/O strings. The background color
+          of the entire screen switches between red and blue depending on whose turn it is, giving each
+          player a clear, immediate signal without any extra UI elements getting in the way.
+        </p>
+        <p>Key systems I built in the game screen:</p>
+        <ul class="pd-list">
+          <li>Photo-per-tile board where each cell stores a URI and player tag; players choose camera or gallery on every move</li>
+          <li>Win detection across all 8 lines after every move, with draw detection when all cells are filled</li>
+          <li>Dynamic background and avatar highlight that switch color per turn (red for P1, blue for P2)</li>
+          <li>Haptic feedback patterns: a celebratory vibration burst on win and a short double buzz on draw</li>
+          <li>Match results saved to SQLite via a local database utility, tracking winner, move count, and board state</li>
+          <li>Victory overlay with confetti cannon, winner photo, and a native Share sheet to post the result</li>
+          <li>Player avatars and nicknames pulled from AsyncStorage profile prefs and displayed live in the game header</li>
+        </ul>
+      </article>
+
+      <!-- Phase 4 -->
+      <article class="pd-step" id="reactions">
+        <span class="pd-phase-label">Phase 4</span>
+        <h4>Social Reactions &amp; GIF System</h4>
+        <div class="pd-grid">
+          <!-- TODO: add screenshot of GIF search modal open -->
+          <img src="images/pictactoe-gif.png" alt="Pic-Tac-Toe GIF reaction search modal open during gameplay">
+          <!-- TODO: add screenshot of GIF reaction appearing on screen -->
+          <img src="images/pictactoe-reaction.png" alt="GIF reaction appearing over the game board">
+        </div>
+        <p>
+          A persistent reaction bar sits at the bottom of the game screen throughout the match. Players
+          can fire quick emoji bursts at the last move and the emojis float over the tile like a sticker.
+          They can also search and send a GIF using the GIPHY API, which pops up as a large overlay in the
+          middle of the screen with a "sent a reaction" badge showing who sent it.
+        </p>
+        <p>
+          I integrated the GIPHY API to handle the search and retrieval of GIFs based on a text query.
+          Results appear as a scrollable grid of thumbnails inside a modal, and tapping one closes the modal
+          and triggers the full-screen GIF overlay. A one-time hint modal introduces the reaction bar the
+          first time a player places a photo, after which it is dismissed and never shown again.
+        </p>
+      </article>
+
+      <!-- Phase 5 -->
+      <article class="pd-step" id="history">
+        <span class="pd-phase-label">Phase 5</span>
+        <h4>Match History &amp; Find Friends</h4>
+        <div class="pd-grid">
+          <!-- TODO: add screenshot of match history screen -->
+          <img src="images/pictactoe-history.png" alt="Pic-Tac-Toe match history screen showing saved game results">
+          <!-- TODO: add screenshot of find friends screen with contact list -->
+          <img src="images/pictactoe-findfriends.png" alt="Pic-Tac-Toe find friends screen showing contact list">
+        </div>
+        <p>
+          Every completed match is saved to a local SQLite database and displayed in the Match History screen.
+          Each entry shows the date, winner, and move count. Players can delete individual matches or
+          reset everything. The list supports pull-to-refresh so new matches appear immediately.
+        </p>
+        <p>
+          The Find Friends screen requests contacts permission and maps real device contacts into the game
+          flow. If permission is denied, it falls back gracefully to a demo contact list so the app stays
+          usable. Once a friend is selected, both player names are passed into the game screen and used
+          throughout: in the turn label, the winner overlay, and the match history record.
+        </p>
+      </article>
+
+    </section>
+
+    <!-- Reflection -->
+    <section class="section-spaced" id="reflection">
+      <h3 class="section-title">Problems &amp; Reflection</h3>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">Building the photo-tile game board was the hardest part.</p>
+        <p class="pd-problem-body">
+          The core challenge was adapting a classic Tic-Tac-Toe win algorithm to work with a photo-based data structure.
+          Each cell needed to hold an image URI and a player tag rather than a simple string, which meant
+          rethinking how board state was stored and checked. I worked through the algorithm using documentation,
+          tutorials, and a lot of iteration before the logic felt clean and reliable.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">The widget idea had to be cut due to platform constraints.</p>
+        <p class="pd-problem-body">
+          Our original vision included a home screen widget so friends could see the game board without
+          opening the app, similar to Locket. Xcode and Android Studio both blocked this at the native level
+          within our project setup. We raised it with our professor, who confirmed the timeline made it
+          out of scope. The core app became the focus, and the widget remains part of the longer-term vision.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Challenge</span>
+        <p class="pd-problem-title">The prototype plays on one device. The vision is async multiplayer.</p>
+        <p class="pd-problem-body">
+          For this course submission, both players pass and play on the same phone, taking turns. The real
+          concept is different: each friend downloads the app and plays from their own device on their own
+          time, like a slow-burn game between friends. The infrastructure for this is already in the codebase
+          with Firebase Firestore and Auth set up and ready. Completing the multiplayer layer is the next step.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">What I Learned</span>
+        <p class="pd-problem-title">This was my first full mobile app, and it taught me to think in systems.</p>
+        <p class="pd-problem-body">
+          Pic-Tac-Toe was my first time building a complete React Native application from scratch:
+          authentication, navigation, local storage, a live game state, external APIs, and a local database
+          all working together. The biggest shift was learning to think about state, what lives where,
+          how screens talk to each other, and how to keep the experience feeling seamless even when a lot
+          is happening behind the scenes. I came out of this project a significantly more confident developer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section-spaced" id="demo">
+      <h3 class="section-title">Watch the App Demo</h3>
+      <div class="pd-video-wrap">
+        <!-- TODO: replace with your actual YouTube embed link -->
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
+          title="Pic-Tac-Toe app demo video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
+    </p>
+    <p>© 2026 Manmeet Sagri</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+
+</body>
+
+</html>

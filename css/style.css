@@ -2,7 +2,8 @@
 
 body {
   font-family: 'Forum', serif;
-  line-height: 1.9;
+  font-size: 1.1rem;
+  line-height: 1.7;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -78,6 +79,10 @@ nav a[aria-current="page"] {
   text-underline-offset: 4px;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
 /* =============== Footer =============== */
 
 .site-footer {
@@ -141,6 +146,12 @@ nav a[aria-current="page"] {
 
 /* =============== Primary button =============== */
 
+a.view-projects-btn,
+a.view-resume-btn {
+  display: inline-block;  /* anchors are inline by default, buttons are block */
+  text-decoration: none;  /* anchors have underline by default */
+}
+
 .view-projects-btn {
   display: inline-block;
   background-color: #000;
@@ -154,9 +165,12 @@ nav a[aria-current="page"] {
 }
 
 .view-projects-btn:hover {
-  background-color: #616161;
   font-style: italic;
   text-decoration: line-through;
+  background-color: #616161;
+  color: #fff;     
+  padding-right: 36px; 
+  
 }
 
 .view-projects-btn::after {
@@ -179,8 +193,84 @@ nav a[aria-current="page"] {
 /* =============== About page =============== */
 
 .about-photo {
-  object-fit: cover;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* =============== Card stack styles =============== */
+
+.photo-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #eee;
+}
+
+.photo-card:nth-child(2) { transform: rotate(-3deg) translateY(6px); }
+.photo-card:nth-child(3) { transform: rotate(2deg) translateY(12px); }
+.photo-card:nth-child(4) { transform: rotate(-1.5deg) translateY(18px); }
+.photo-card:nth-child(5) { transform: rotate(1deg) translateY(24px); }
+.photo-card:nth-child(6) { transform: rotate(-2deg) translateY(30px); }
+
+.photo-card.is-top {
+  cursor: grab;
+  z-index: 10;
+  transform: rotate(0) translateY(0);
+}
+
+.photo-card.is-top:active {
+  cursor: grabbing;
+}
+
+.photo-card.is-dragging {
+  transition: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card.is-dismissing {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.card-stack-hint {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.card-stack-hover-hint {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.card-stack:hover .card-stack-hover-hint {
+  opacity: 1;
+}
+
+.card-stack.is-dragging .card-stack-hover-hint {
+  opacity: 0;
+}
+
+.hint-arrow {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 6px 12px;
+  border-radius: 20px;
 }
 
 .about-text .lead {
@@ -215,6 +305,9 @@ nav a[aria-current="page"] {
 .view-resume-btn:hover {
   background-color: #616161;
   font-style: italic;
+  text-decoration: line-through;
+  color: #fff;      
+  padding-right: 36px; 
 }
 
 .view-resume-btn::after {
@@ -230,7 +323,7 @@ nav a[aria-current="page"] {
 }
 
 .view-resume-btn:active {
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #ccc;
 }
 
@@ -283,6 +376,24 @@ nav a[aria-current="page"] {
 
 .project:hover .overlay {
   opacity: 1;
+}
+
+/* =============== Back to Top Button =============== */
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 25px 15px;
+  font-size: 16px;
+  font-family: 'Forum', serif;
+  border: none;
+  border-radius: 5px;
+  background: #0d0d0c;
+  color: #fff;
+  cursor: pointer;
+  display: none; 
+  z-index: 1000;
 }
 
 /* =============== Project detail =============== */
@@ -689,4 +800,189 @@ code {
   font-size: 1.1rem;
   color: #fff;
   letter-spacing: 0.5px;
+}
+/* =============== Project detail — updated styles =============== */
+
+.pd-label {
+  font-family: 'Forum', serif;
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 10px;
+}
+
+.pd-phase-label {
+  display: block;
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 6px;
+}
+
+.pd-desc-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 12px;
+}
+
+.pd-stats {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0 24px;
+  flex-wrap: wrap;
+}
+
+.pd-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-stat-value {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.5rem;
+  color: #222;
+  line-height: 1;
+}
+
+.pd-stat-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.pd-note {
+  font-family: 'Forum', serif;
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 8px;
+  border-left: 2px solid #ddd;
+  padding-left: 14px;
+}
+
+.pd-list {
+  font-family: 'Forum', serif;
+  color: #444;
+  padding-left: 20px;
+  margin: 12px 0 0;
+  line-height: 1.8;
+}
+
+.pd-list li {
+  margin-bottom: 4px;
+}
+
+.pd-problem {
+  border-top: 1px solid #eee;
+  padding: 28px 0;
+}
+
+.pd-problem:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.pd-problem-label {
+  display: block;
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 6px;
+}
+
+.pd-problem-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.15rem;
+  color: #222;
+  margin: 0 0 10px;
+}
+
+.pd-problem-body {
+  font-family: 'Forum', serif;
+  color: #555;
+  margin: 0;
+  max-width: 66ch;
+}
+
+.pd-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin-top: 24px;
+}
+
+.pd-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* =============== Index tagline typewriter =============== */
+
+.intro-text .tagline {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 12px;
+  min-height: 1.4em;
+  border-right: 2px solid #222;
+  display: inline-block;
+  padding-right: 3px;
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { border-color: #222; }
+  50%       { border-color: transparent; }
+}
+
+.intro-text .hook {
+  font-family: 'Forum', serif;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-status {
+  font-family: 'Forum', serif;
+  font-style: italic;
+  color: #aaa;
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+/* =============== Focus styles =============== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}
+
+/* =============== Slides section =============== */
+
+.slides-intro {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.slide-counter {
+  margin-top: 0.75rem;
+  text-align: center;
 }

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Corners Daycare · Manmeet Sagri</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>MANMEET SAGRI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <main class="project-detail">
+
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+
+    <!-- TODO: replace with your 5 Corners demo video -->
+    <section class="mini-video-hero" aria-label="5 Corners Daycare website preview video">
+      <video autoplay muted loop playsinline>
+        <source src="videos/5corners.mov" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="pd-hero" id="overview">
+      <div class="pd-left">
+        <p class="pd-label">IAT 339 · Web Design &amp; Development</p>
+        <h2 class="pd-title">5 Corners<br>Daycare</h2>
+
+        <div class="pd-stats">
+          <div class="pd-stat">
+            <span class="pd-stat-value">2</span>
+            <span class="pd-stat-label">Team Members</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">6</span>
+            <span class="pd-stat-label">Pages</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">Real</span>
+            <span class="pd-stat-label">Client</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">6 wks</span>
+            <span class="pd-stat-label">Timeline</span>
+          </div>
+        </div>
+
+        <p class="pd-meta"><em>February – March 2026</em></p>
+        <p class="pd-meta"><strong>Team:</strong> Manmeet Sagri, Hind Hammad</p>
+        <p class="pd-meta"><strong>My Role:</strong> Checkout, Contact &amp; Location Pages, GitHub Management, Accessibility Audit &amp; Visual Consistency</p>
+        <p class="pd-meta"><strong>Tools:</strong> HTML, CSS, GitHub</p>
+
+      </div>
+
+      <div class="pd-right">
+        <p class="pd-desc-label">What is it?</p>
+        <p>
+          A fully responsive multi-page website built for 5 Corners Daycare, a real childcare centre
+          in Surrey, BC. We worked directly with the client to redesign their web presence with real content,
+          real contact information, and a real user need at the centre of every decision.
+        </p>
+        <p>
+          The site covers the full user journey from learning about the programs to completing registration,
+          built entirely with semantic HTML and CSS using no frameworks.
+        </p>
+        <p class="pd-note">
+          My focus was on the checkout, contact, and location pages, GitHub version control, the full
+          accessibility audit, and making sure every page was visually consistent and properly aligned
+          before final submission.
+        </p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="pd-process" id="process">
+      <h3 class="section-title">The Process</h3>
+
+      <!-- Phase 1 -->
+      <article class="pd-step" id="styleguide">
+        <span class="pd-phase-label">Phase 1</span>
+        <h4>Style Guide &amp; Setup</h4>
+        <div class="pd-grid">
+          <!-- TODO: screenshot of the consolidated style guide page -->
+          <img src="images/fivecorners-styleguide.png" alt="Consolidated style guide for 5 Corners Daycare showing typography, colors, and components">
+          <!-- TODO: screenshot of GitHub repo with branch commits from both members -->
+          <img src="images/fivecorners-github.png" alt="GitHub repository showing individual commits from both team members on separate branches">
+        </div>
+        <p>
+          Both Hind and I had completed individual style guides for our P01 assignment. For P02 we consolidated
+          them into one shared document, agreeing on a unified visual direction for the client. I set up the
+          GitHub repository, established the branching workflow, and made sure both of us were committing
+          our work to separate branches before merging.
+        </p>
+        <p>
+          The color palette uses a purple, dark blue, light blue, and green system that runs consistently
+          across every page. The typography pairs Archivo Black for headings, Sour Gummy for subheadings
+          and interactive elements, and Nunito for body text.
+        </p>
+      </article>
+
+      <!-- Phase 2 -->
+      <article class="pd-step" id="build">
+        <span class="pd-phase-label">Phase 2</span>
+        <h4>Building the Pages</h4>
+        <div class="pd-grid">
+          <!-- TODO: screenshot of programs page with card grid -->
+          <img src="images/fivecorners-programs.png" alt="5 Corners Daycare programs page showing three program cards in a responsive grid">
+          <!-- TODO: screenshot of home page with parallax hero and about deck -->
+          <img src="images/fivecorners-home.png" alt="5 Corners Daycare home page showing parallax hero scene and about us slide deck">
+        </div>
+        <p>
+          The site covers six pages: Home, Programs, Register, Contact Us, Location and Hours, and the Style Guide.
+          The home page features a parallax layered illustration scene, a scrolling about deck with anchor navigation,
+          a team grid, and an events section. Programs lists three offerings with cards and links down to detailed
+          daily schedule sections. The contact page has a full form with validation, and the location page embeds
+          a live Google Maps iframe.
+        </p>
+        <p>
+          All layout is built with CSS Grid and Flexbox across three responsive breakpoints at 48rem and 64rem.
+          Every element uses relative units (rem) so the layout scales with font size rather than breaking at
+          fixed pixel values.
+        </p>
+      </article>
+
+      <!-- Phase 3 -->
+      <article class="pd-step" id="checkout">
+        <span class="pd-phase-label">Phase 3</span>
+        <h4>Checkout, Contact &amp; Location Pages</h4>
+        <div class="pd-grid">
+          <!-- TODO: screenshot of checkout page on desktop (2 col layout) -->
+          <img src="images/fivecorners-checkout-desktop.png" alt="5 Corners Daycare checkout page on desktop showing cart summary and payment form side by side">
+          <!-- TODO: screenshot of contact page with form -->
+          <img src="images/location.png" alt="5 Corners Daycare location and hours  page showing map directions using map api">
+        </div>
+        <p>
+          I built three of the site's six pages entirely. The checkout page has two sections: a cart summary
+          table showing the selected program, registration fee, spot deposit, and total, and a payment form
+          with fields for parent name, payment method, card details, expiry, and CVV. On mobile the two
+          panels stack; on desktop they sit side by side in a two-column grid.
+        </p>
+        <p>
+          The contact page pairs a quick-reference info panel on the left with a full message form on the
+          right. The form includes name, email, optional phone, subject, message, and a send-a-copy-to-yourself
+          checkbox, with both submit and reset actions. All inputs have proper label associations, required
+          field indicators, and autocomplete attributes throughout.
+        </p>
+        <p>
+          The location page uses the Google Maps Embed API to show an interactive map of the daycare alongside
+          the address, phone number, and hours of operation. On mobile the map and info stack vertically;
+          on desktop they split into two columns. A direct link to open the location in Google Maps is also
+          included so users on mobile can jump straight to directions.
+        </p>
+      </article>
+
+      <!-- Phase 4 -->
+      <article class="pd-step" id="github">
+        <span class="pd-phase-label">Phase 4</span>
+        <h4>GitHub &amp; Version Control</h4>
+        <div class="pd-grid">
+          <!-- TODO: screenshot of git commit history showing separate branches -->
+          <img src="images/fivecorners-commits.png" alt="Git commit history showing individual commits from Manmeet and Hind on separate branches">
+          <!-- TODO: screenshot of a merge or pull request -->
+          <img src="images/fivecorners-merge.png" alt="GitHub pull request showing branch merge from feature branch into main">
+        </div>
+        <p>
+          I managed the GitHub repository throughout the project, including setting up the branching structure
+          and overseeing merges. Working in a real collaborative Git workflow for the first time brought its
+          own challenges: local and remote versions falling out of sync, conflicts appearing after pushes,
+          and learning how to catch and resolve those issues before they affected the shared codebase.
+        </p>
+        <p>
+          I identified patterns in where conflicts were coming from, communicated clearly with my teammate
+          about the pull-before-you-push workflow, and kept a close eye on commits throughout. It was a
+          genuinely useful lesson that good collaboration requires just as much communication as it does code.
+        </p>
+      </article>
+
+      <!-- Phase 5 -->
+      <article class="pd-step" id="audit">
+        <span class="pd-phase-label">Phase 5</span>
+        <h4>Accessibility Audit &amp; Visual Consistency</h4>
+        <div class="pd-grid">
+          <!-- TODO: screenshot of audit checklist or before/after of a fixed element -->
+          <img src="images/beforeConsisnt.png" alt="Screenshot showing inconsistent design">
+          <!-- TODO: screenshot showing consistent card alignment across a page -->
+          <img src="images/afterConsistent.png" alt="Screenshot showing consistent design">
+        </div>
+        <p>
+          Once the full site was built, I ran a thorough accessibility audit across every page. This included
+          checking heading order (no skipped levels), confirming all images had meaningful alt text,
+          verifying all form inputs had associated labels using the for attribute, reviewing ARIA labels
+          on interactive regions, and making sure the language attribute was set on every HTML element.
+        </p>
+        <p>
+          The audit surfaced inconsistencies across the codebase: heading hierarchy issues, missing label
+          associations, and elements that were not semantically appropriate for their content. I worked
+          through each one systematically and fixed them before submission.
+        </p>
+        <p>
+          I also reviewed every page for visual consistency, correcting misaligned elements, uneven spacing,
+          and components that were not rendering the same way across pages. I applied box-sizing border-box
+          globally and used Flexbox alignment to make sure all cards, buttons, and form fields were
+          consistent and properly aligned at every screen size.
+        </p>
+      </article>
+    </section>
+
+    <!-- Reflection -->
+    <section class="section-spaced" id="reflection">
+      <h3 class="section-title">Problems &amp; Reflection</h3>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">Version control conflicts kept reintroducing fixed errors.</p>
+        <p class="pd-problem-body">
+          Working in a collaborative Git workflow for the first time, we ran into a pattern where fixes
+          would disappear after a push because local and remote versions had fallen out of sync. I identified
+          what was happening, communicated the issue clearly, and established a pull-first practice for
+          the team going forward. Monitoring commits closely from that point kept the codebase stable
+          through to submission.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">Semantic inconsistencies surfaced during the audit and needed fixing before submission.</p>
+        <p class="pd-problem-body">
+          The audit revealed heading hierarchy issues, missing label associations, and non-semantic element
+          choices spread across different sections of the codebase. Rather than leaving them, I worked
+          through each one systematically and resolved them before we submitted. Taking ownership of the
+          full audit meant I came out of this project with a much stronger and more practical understanding
+          of accessibility than I went in with.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">Feedback</span>
+        <p class="pd-problem-title">The navigation wraps on very small screens instead of collapsing into a hamburger menu.</p>
+        <p class="pd-problem-body">
+          The grader noted that while the site was well-designed and responsive, a hamburger menu for very
+          small screens would have improved the experience by giving users a cleaner way to navigate rather
+          than having the nav links wrap. It is a clear next step I would prioritize if this project continued.
+        </p>
+      </div>
+
+      <div class="pd-problem">
+        <span class="pd-problem-label">What I Learned</span>
+        <p class="pd-problem-title">Accessibility is not a checklist. It is a design decision made at every step.</p>
+        <p class="pd-problem-body">
+          Running the full audit myself gave me a much more practical understanding of what semantic HTML
+          actually means in use. Heading order matters for screen readers. Label associations matter for
+          keyboard users. Alt text needs to describe function, not just appearance. These are not rules to
+          follow at the end of a project. They are decisions that should shape how you write HTML from the
+          first line. I came out of this project significantly more confident in writing accessible,
+          well-structured code from the start.
+        </p>
+      </div>
+    </section>
+
+     <!-- Live Site -->
+     <section class="section-spaced" id="demo">
+      <h3 class="section-title">View the Live Site</h3>
+      <p>The finished website is hosted on GitHub Pages and fully accessible at the link below:</p>
+      <a href="https://msagri05.github.io/p02-5Corners-Daycare-team01/" target="_blank" class="view-projects-btn">
+        Visit 5 Corners Daycare
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
+    </p>
+    <p>© 2026 Manmeet Sagri</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+
+</body>
+
+</html>

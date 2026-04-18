@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Manmeet Sagri</title>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
 
-  <!-- Body + heading fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header / Navigation -->
   <header>
     <h1>MANMEET SAGRI</h1>
     <nav>
@@ -24,65 +23,84 @@
     </nav>
   </header>
 
-  <!-- Main About Page Content -->
   <main class="page">
     <section class="about">
       <h2 class="section-title">About Me</h2>
 
-      <!-- Two-column layout: photo + short bio -->
       <div class="about-container">
-        
-        <!-- Profile Photo -->
-        <img 
-          src="images/myPic2.jpeg" 
-          alt="Photo of Manmeet Sagri" 
-          class="about-photo"
-        />
 
-        <!-- Written intro / biography -->
+        <!-- Photo card stack -->
+        <div class="card-stack" id="cardStack" role="region" aria-label="Photos of Manmeet Sagri">
+          <div class="card-stack-hover-hint" aria-hidden="true">
+            <span class="hint-arrow">← swipe</span>
+            <span class="hint-arrow">swipe →</span>
+          </div>
+          <div class="photo-card">
+            <img src="images/alsoMe.png" alt="Portrait of Manmeet Sagri">
+          </div>
+          <div class="photo-card">
+            <img src="images/meDirector.png" alt="Manmeet directing, picture from another project">
+          </div>
+          <div class="photo-card">
+            <img src="images/meBicyclying.png" alt="Picture of Manmeet bicycling">
+          </div>
+          <div class="photo-card">
+            <img src="images/hikeManmeet.png" alt="Picture of Manmeet hiking St. Marks Summit">
+          </div>
+          <div class="photo-card">
+            <img src="images/myPic2.jpeg" alt="Photo of Manmeet Sagri, with a camera lens">
+          </div>
+        </div>
+
         <div class="about-text">
 
           <p class="lead">
-            Hello! I’m <strong>Manmeet Sagri</strong>, an undergraduate student at SFU’s School of Interactive Arts &amp; Technology,
-            specializing in design and development. I love working at the intersection of technology and creativity, bringing ideas to life through interactive, level-based games and digital experiences.
+            Hi, I'm <strong>Manmeet Sagri</strong>, a Front-End Developer and UX Designer at SFU SIAT,
+            crafting digital experiences where intentional design and clean code work together.
           </p>
 
           <p>
-            My academic projects range from game development and creative coding simulations to responsive web prototypes,
-            giving me hands-on experience in both technical and design-focused work. Alongside my studies, I explore photography,
-            volunteering with community organizations and contributing freelance work to SFU’s The Peak newspaper.
+            I am the passionate friend in the room who gets excited about every new feature drop, every
+            interface refresh, and every tool that just shipped. That enthusiasm for emerging technology
+            and human-centered design is what drives how I think, prototype, and build.
           </p>
 
           <p>
-            I’m always curious to learn something new, whether that’s refining my programming skills, experimenting with creative media,
-            or documenting the world through my lens. No matter the medium, I’m passionate about creating work that feels engaging,
-            personal, and true to my creativity.
+            My work spans interaction design, creative coding, and front-end development. From game systems
+            built in Java to responsive web interfaces designed in Figma and coded in HTML and CSS, I care
+            deeply about usability, visual hierarchy, and the reasoning behind every design decision.
           </p>
 
-          <!-- Resume Button -->
-          <a 
-            href="https://drive.google.com/file/d/1jf1BxYGaMm5XWjYIarKkjJHwsc_TG60q/view?usp=sharing"
-            target="_blank"
-            class="view-resume-btn"
-          >
-            View My Resume
-          </a>
+          <p>
+            Outside of studio and screen, I enjoy photography, cycling, and have recently gotten into hiking.
+            I am drawn to experiences that push me somewhere new, in design and in life.
+          </p>
+
+          <p class="about-status">Actively seeking internships where I can bring my skills into the real world and keep
+            learning from people building things that matter.</p>
+
+            <a href="https://drive.google.com/file/d/1jf1BxYGaMm5XWjYIarKkjJHwsc_TG60q/view?usp=sharing" target="_blank" class="view-resume-btn">
+              View My Resume
+            </a>
 
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer (shared across all pages) -->
   <footer class="site-footer">
     <p>
-      <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
-      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
     </p>
+    <p>© 2026 Manmeet Sagri</p>
   </footer>
 
-  <!-- JavaScript interactions -->
   <script src="main.js"></script>
+
 </body>
+
 </html>

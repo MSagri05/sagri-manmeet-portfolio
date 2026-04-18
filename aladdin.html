@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Manmeet Sagri</title>
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aladdin's Treasure Hunt — Manmeet Sagri</title>
+ 
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+ 
   <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet">
 </head>
-
+ 
 <body>
-  <!-- Header -->
+ 
   <header>
     <h1>MANMEET SAGRI</h1>
     <nav>
@@ -26,151 +25,205 @@
       <a href="about.html">About Me</a>
     </nav>
   </header>
-
-  <!-- Main -->
+ 
   <main class="project-detail">
-
-    <!-- Back Button -->
+ 
     <a href="projects.html" class="back-link">← Back to Projects</a>
-
-    <!-- Mini Gameplay Hero Video -->
-    <section class="mini-video-hero">
+ 
+    <section class="mini-video-hero" aria-label="Aladdin gameplay preview video">
       <video autoplay muted loop playsinline>
-        <source src="videos/aladdin-demo.mp4" type="video/mp4" />
+        <source src="videos/aladdin-demo.mp4" type="video/mp4">
       </video>
     </section>
-
-    <!-- Project Hero Section -->
-    <section class="pd-hero">
+ 
+    <section class="pd-hero" id="overview">
       <div class="pd-left">
-        <h2 class="pd-title">Aladdin’s<br>Treasure Hunt</h2>
-
-        <p class="pd-meta"><em>March 2025 – April 2025</em></p>
-        <p class="pd-meta"><strong>Role:</strong> Game Designer and Developer</p>
-        <p class="pd-meta"><strong>Tools:</strong> Processing, Figma</p>
+        <p class="pd-label">IAT 167 · Digital Games</p>
+        <h2 class="pd-title">Aladdin's Treasure Hunt</h2>
+        <div class="pd-stats">
+          <div class="pd-stat">
+            <span class="pd-stat-value">15</span>
+            <span class="pd-stat-label">Classes</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">3</span>
+            <span class="pd-stat-label">Levels</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">Solo</span>
+            <span class="pd-stat-label">Project</span>
+          </div>
+          <div class="pd-stat">
+            <span class="pd-stat-value">4 wks</span>
+            <span class="pd-stat-label">Timeline</span>
+          </div>
+        </div>
+        <p class="pd-meta"><em>March – April 2025</em></p>
+        <p class="pd-meta"><strong>Role:</strong> Game Designer &amp; Developer</p>
+        <p class="pd-meta"><strong>Tools:</strong> Processing (Java), Figma, Sketch.io</p>
       </div>
-
+ 
       <div class="pd-right">
+        <p class="pd-desc-label">What is it?</p>
         <p>
-          <em>Aladdin’s Treasure Hunt</em> is a side-scrolling platformer I created for IAT 167: Digital Games. The
-          goal was to design and program a multi-level game in Processing with an emphasis on object-oriented
-          programming and core mechanics.
+          A multi-level 2D side-scrolling platformer built in Processing for IAT 167. The assignment required
+          a platformer or tile-based game with an emphasis on OOP and core mechanics.
         </p>
         <p>
-          I built a narrative where Aladdin collects a hidden key to unlock a treasure and rescue Princess Jasmine
-          while navigating moving platforms, enemies, and hazards. The game includes collectibles, level progression,
-          health, and sound cues to enhance the atmosphere.
+          I built a narrative-driven experience. Aladdin must collect a hidden key, unlock a treasure chest,
+          and rescue Princess Jasmine across three escalating levels. Each level introduces new enemies,
+          tighter physics, and harder platforming.
         </p>
       </div>
     </section>
-
-    <!-- Process Section -->
-    <section class="pd-process">
-      <h3 class="section-title">The Process…</h3>
-
-      <!-- Week 1 -->
-      <article class="pd-step">
-        <h4>Week 1</h4>
+ 
+    <section class="pd-process" id="process">
+      <h3 class="section-title">The Process</h3>
+ 
+      <article class="pd-step" id="planning">
+        <span class="pd-phase-label">Phase 1</span>
+        <h4>Concept &amp; Planning</h4>
         <div class="pd-grid">
-          <img src="images/storyboard.png" alt="Storyboard sketches for Aladdin level ideas" />
-          <img src="images/UML.png" alt="UML diagram of game structure" />
+          <img src="images/storyboard.png" alt="Storyboard sketches mapping out Aladdin's level ideas and narrative">
+          <img src="images/UML.png" alt="UML diagram showing 15 classes, their fields, and method relationships">
         </div>
         <p>
-          In the early stage, I finalized the idea of creating a multi-level side-scrolling game inspired by Aladdin. I
-          developed a game proposal and storyboard to outline the narrative, level progression, and gameplay mechanics.
-          To pre-plan the code structure, I created a UML diagram mapping out the classes, fields, and methods, ensuring
-          encapsulation and object-oriented principles were applied from the start.
+          Before writing a line of code, I built a full game proposal, storyboard, and UML diagram. The diagram
+          mapped every class, field, and method across all 15 files, from <code>Character</code> and <code>Enemy</code>
+          to <code>MovingBlock</code> and <code>SlipperyBlock</code>. Planning this upfront meant the codebase
+          stayed organized and extendable throughout development.
         </p>
       </article>
-
-      <!-- Week 2 -->
-      <article class="pd-step">
-        <h4>Week 2</h4>
+ 
+      <article class="pd-step" id="assets">
+        <span class="pd-phase-label">Phase 2</span>
+        <h4>Asset Design</h4>
         <div class="pd-grid">
-          <img src="images/assets.png" alt="Assets and audio folder with sprites, sequences, and sounds" />
-          <img src="images/readMe.png" alt="README credits and references for images and audio" />
+          <img src="images/assets.png" alt="Assets and audio folder showing organized sprites, sequences, and sounds">
+          <img src="images/readMe.png" alt="README file with credits and citations for all external images and audio">
         </div>
         <p>
-          My next step was designing the UI elements. For this project, I created some assets directly in Java, such as
-          simple UI shapes. The sequence animations for Aladdin’s running, jumping, and coin spinning were sourced from
-          free websites, which I adapted to fit the game. I also designed a few custom elements myself in Figma,
-          including the introduction letter image and health token. All assets, whether self-made, drawn in Java, or
-          collected online, were organized into a central “data” folder.
+          Sprite animations for Aladdin's run, jump, and coin spin were sourced from free libraries, all
+          cited in the README. I designed the health token and intro letter myself in Figma. Some in-game
+          shapes were drawn directly in Java. Everything lived in a central <code>data/</code> folder.
         </p>
-        <p>
-          I also made sure to properly reference all borrowed sources, documenting image and audio credits in my README.
-          This ensured transparency about which parts I designed myself and which were adapted from external resources.
+        <p class="pd-note">
+          In hindsight, I underestimated my own ability. The assets I created were strong. Future projects
+          will prioritize original work from the start.
         </p>
       </article>
-
-      <!-- Week 3 & 4 -->
-      <article class="pd-step">
-        <h4>Week 3 &amp; 4</h4>
+ 
+      <article class="pd-step" id="development">
+        <span class="pd-phase-label">Phase 3</span>
+        <h4>Core Development</h4>
         <div class="pd-grid">
-          <img src="images/code.png" alt="Processing / Java code screenshot showing Character class and animation sequence" />
-          <img src="images/gameplay.png" alt="Gameplay screenshot of Aladdin jumping across platforms and collecting coins" />
+          <img src="images/code.png"
+            alt="Processing Java code showing the Character class and animation sequence logic">
+          <img src="images/gameplay.png"
+            alt="Gameplay screenshot of Aladdin jumping across platforms and collecting coins">
+        </div>
+        <p>Built using OOP and encapsulation, each class self-contained and reusable. Key systems I implemented:</p>
+        <ul class="pd-list">
+          <li>A 6-state game state machine (title, instructions, 3 levels, victory, death)</li>
+          <li>Procedural block generation that spawns and despawns blocks as the player moves</li>
+          <li>Three block types: standard, <code>MovingBlock</code>, and <code>SlipperyBlock</code></li>
+          <li>Enemy AI with snakes pacing their assigned block; 10 in Level 2, 20 in Level 3</li>
+          <li>Health system with token pickups and continuous damage on enemy contact</li>
+          <li>Sound management via Minim covering music, transitions, coins, death, and victory</li>
+          <li>8-frame animated sprites and a full Play Again reset function</li>
+        </ul>
+      </article>
+ 
+      <article class="pd-step" id="testing">
+        <span class="pd-phase-label">Phase 4</span>
+        <h4>Level Escalation &amp; Testing</h4>
+        <div class="pd-grid">
+          <img src="images/level2.png" alt="Screen showing a message that user has secured the key and is ready to progress to level 2">
+          <img src="images/snakeAladdin.png" alt="Gameplay screenshot of the next level with enemy snakes on platform">
         </div>
         <p>
-          I built the game using object oriented programming in Java, applying encapsulation to keep each class
-          structured and reusable. Clear comments documented functionality and made the code easy to maintain. This
-          organization allowed me to add features such as animations, sound effects, and level progression without
-          disrupting the core system.
+          Each level escalated difficulty through physics parameters. Level 2 reduced movement speed and
+          increased gravity. Level 3 pushed further with <code>acc = 0.2</code> and <code>grav = 5.5</code>,
+          plus 20 enemies and Princess Jasmine appearing after a 7-second countdown. Touching her triggers
+          the victory state.
         </p>
         <p>
-          Once the core features were programmed, I tested by playing through each level, refining collisions, platform
-          movement, and triggers. Encapsulation also supported efficient debugging, helping me quickly locate and fix
-          errors while improving polish and gameplay balance.
+          I playtested every level repeatedly, tuning hitboxes, platform timing, and trigger logic.
+          Encapsulation made debugging efficient as issues were isolated per class without breaking the system.
         </p>
       </article>
     </section>
-
-    <!-- Challenges Section -->
-    <section class="section-spaced">
-      <h3 class="section-title">Challenges and Reflection</h3>
-
-      <p>
-        One of the main challenges I faced was creating UI assets. Although the assignment allowed free online sources,
-        the professor encouraged us to design our own elements. I created a few assets myself but relied heavily on
-        external images, which taught me the importance of building more original UI in future projects. From my peers,
-        I learned about tools such as Illustrator and Sketch.io, and I plan to use these for my next project.
-      </p>
-      <p>
-        Overall, the feedback I received was positive, with a reminder to include more comments throughout my code.
-        This reinforced the value of clear documentation alongside strong design and programming practices.
-      </p>
+ 
+    <section class="section-spaced" id="reflection">
+      <h3 class="section-title">Problems &amp; Reflection</h3>
+ 
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">Collision detection with moving enemies was inaccurate.</p>
+        <p class="pd-problem-body">
+          Enemy positions needed to account for the world scroll offset. I resolved this by computing
+          screen-relative positions using <code>worldOffset</code> and separating Aladdin/Jasmine collision
+          from Aladdin/Enemy collision into two overloaded <code>checkCollision()</code> methods.
+        </p>
+      </div>
+ 
+      <div class="pd-problem">
+        <span class="pd-problem-label">Problem</span>
+        <p class="pd-problem-title">Block clustering made early levels unplayable.</p>
+        <p class="pd-problem-body">
+          Procedural generation placed blocks too close together. I added a minimum distance check
+          (<code>minDistance = 200</code>) that rejects positions too near existing blocks and re-rolls
+          until a valid position is found.
+        </p>
+      </div>
+ 
+      <div class="pd-problem">
+        <span class="pd-problem-label">Feedback</span>
+        <p class="pd-problem-title">Aladdin couldn't fight back, only avoid.</p>
+        <p class="pd-problem-body">
+          The health system meant taking damage was passive. With more time, I would have added a projectile
+          attack for Aladdin and a boss enemy in Level 3. Time constraints kept these on the backlog,
+          but the feedback sharpened how I scope future projects.
+        </p>
+      </div>
+ 
+      <div class="pd-problem">
+        <span class="pd-problem-label">What I Learned</span>
+        <p class="pd-problem-title">Planning pays off. Documentation matters.</p>
+        <p class="pd-problem-body">
+          The UML diagram directly reduced debugging time. Working solo on a 15-class system taught me
+          how much upfront structure matters. The main feedback was to add more code comments, which reinforced
+          that clear documentation is as important as strong programming.
+        </p>
+      </div>
     </section>
-
-    <!-- Gameplay Video -->
-    <section class="section-spaced" style="text-align:center;">
-      <h3 class="section-title" style="display:inline-block;">Watch the full gameplay here!</h3>
-
-      <div style="margin-top:24px;">
-        <iframe
-          width="800"
-          height="450"
-          src="https://www.youtube.com/embed/U_tKk14pCtg?start=2"
-          title="Aladdin’s Treasure Quest Gameplay"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          style="max-width:100%; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.15);"
-        ></iframe>
+ 
+    <section class="section-spaced" id="demo">
+      <h3 class="section-title">Watch the Full Gameplay</h3>
+      <div class="pd-video-wrap">
+        <iframe src="https://www.youtube.com/embed/U_tKk14pCtg?start=2"
+          title="Aladdin's Treasure Hunt full gameplay video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <p>
-      <a href="mailto:sagrimanmeet@gmail.com">Email</a> ·
-      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/MSagri05" target="_blank">GitHub</a>
+      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
+        aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
+      <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
+      <a href="styleGuide.html">Style Guide</a>
     </p>
+    <p>© 2026 Manmeet Sagri</p>
   </footer>
 
-  <!-- JS -->
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
+
 </body>
 
 </html>
